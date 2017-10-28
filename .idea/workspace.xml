@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da19e340-d717-4c0a-b4af-6fc9bb5d6629" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.eslintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/am-system.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/am-auth.js" afterPath="$PROJECT_DIR$/lib/am-auth.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/am-bootstrap.js" afterPath="$PROJECT_DIR$/lib/am-bootstrap.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/am-controller.js" afterPath="$PROJECT_DIR$/lib/am-controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/am-error.js" afterPath="$PROJECT_DIR$/lib/am-error.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/am-invite.js" afterPath="$PROJECT_DIR$/lib/am-invite.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/am-leadManager.js" afterPath="$PROJECT_DIR$/lib/am-leadManager.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/am-mailing.js" afterPath="$PROJECT_DIR$/lib/am-mailing.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/am-model.js" afterPath="$PROJECT_DIR$/lib/am-model.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/am-rdstation.js" afterPath="$PROJECT_DIR$/lib/am-rdstation.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/am-router.js" afterPath="$PROJECT_DIR$/lib/am-router.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/am-softDelete.js" afterPath="$PROJECT_DIR$/lib/am-softDelete.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/check-version.js" afterPath="$PROJECT_DIR$/lib/check-version.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dateTime.js" afterPath="$PROJECT_DIR$/lib/dateTime.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mongooseUtil.js" afterPath="$PROJECT_DIR$/lib/util.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,7 +12,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="3" column="55" lean-forward="false" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -68,9 +61,9 @@
         <option value="$PROJECT_DIR$/lib/am-invite.js" />
         <option value="$PROJECT_DIR$/lib/am-model.js" />
         <option value="$PROJECT_DIR$/lib/am-mailing.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/lib/am-system.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -91,7 +84,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="888" />
     <option name="y" value="102" />
     <option name="width" value="1634" />
@@ -190,18 +183,18 @@
       <workItem from="1509120266487" duration="1899000" />
       <workItem from="1509124079097" duration="2909000" />
       <workItem from="1509134092222" duration="20000" />
-      <workItem from="1509200174494" duration="1682000" />
+      <workItem from="1509200174494" duration="1750000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7187000" />
+    <option name="totallyTimeSpent" value="7255000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="888" y="102" width="1634" height="873" extended-state="1" />
+    <frame x="888" y="102" width="1634" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20854272" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20854272" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -317,14 +310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -353,6 +338,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="55" lean-forward="false" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
           <folding />
         </state>
       </provider>
