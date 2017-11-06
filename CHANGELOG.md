@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.2] - 2017-11-6
+### Added
+- util.isValidObjectId added
+
 ## [1.1.1] - 2017-10-31
 ### Added
 - 'client-env' added as headers accepted
