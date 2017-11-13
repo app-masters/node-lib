@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.5] - 2017-11-13
+### Added
+- ApiBootstrap Added
+
 ## [1.1.4] - 2017-11-13
 ### Changed
 - Added some try catch on user bcrypt
