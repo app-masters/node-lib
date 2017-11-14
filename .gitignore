@@ -31,3 +31,7 @@ node_modules
 # Lockers
 package-lock.json
 yarn-lock.json
+
+# IDEA
+
+.idea
