@@ -10,6 +10,21 @@ let denyAccess = {
     mobile: []
 };
 
+
+var mail = {
+    from: 'noreply@appmasters.io',
+    fromName: 'App Masters',
+    host: 'mail.appmasters.io',
+    port: 2525,
+    auth: {
+        user: 'noreply@appmasters.io',
+        pass: 'XO}O3$kBH}Bc'
+    },
+    tls: {
+        rejectUnauthorized: false
+    }
+};
+
 envs.development = {
     database: {
         url: "local"
@@ -19,7 +34,8 @@ envs.development = {
         disabledOnDev: false,
         secret: "someSecret",
         denyAccess
-    }
+    },
+    mail: mail
 };
 
 envs.test = envs.development;

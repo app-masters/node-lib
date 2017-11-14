@@ -27,3 +27,7 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 .idea/
+
+# Lockers
+package-lock.json
+yarn-lock.json
