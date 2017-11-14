@@ -6,11 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.1.6] / [1.1.7] - 2017-11-14
+## [1.1.6] / [1.1.8] - 2017-11-14
 ### Added
 - Am-Mailing in ApiBootstrap
 - New Password request flow in am-auth
-- md5 Import
+- md5 and am-mailing Import
 
 ## [1.1.5] - 2017-11-13
 ### Added
