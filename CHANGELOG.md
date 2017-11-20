@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.13] - 2017-11-20
+### Added
+- nodeRestful added with registerMultipleRoutes
+
 ## [1.1.11 / 1.1.12] - 2017-11-20
 ### Changed
 - Changed AMError to have .init() and .listen() methods, to catch all errors during api lifetime
