@@ -11,7 +11,7 @@ let denyAccess = {
 };
 
 
-var mail = {
+const mail = {
     from: 'noreply@appmasters.io',
     fromName: 'App Masters',
     host: 'mail.appmasters.io',
@@ -25,9 +25,15 @@ var mail = {
     }
 };
 
+const invite = {
+    singleUserLink: true,
+    baseUrlAndRoute: 'http://publicurl.com/invite/',
+    sendEmail: true
+};
+
 envs.development = {
     database: {
-        url: "local"
+        url: "mongodb://127.0.0.1/node-lib_test_db"
     },
     rollbar: rollbar,
     security: {
@@ -35,7 +41,8 @@ envs.development = {
         secret: "someSecret",
         denyAccess
     },
-    mail: mail
+    mail: mail,
+    invite
 };
 
 envs.test = envs.development;

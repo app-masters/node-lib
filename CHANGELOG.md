@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.11] - 2017-11-20
+### Changed
+- Changed AMError to have .init() and .listen() methods, to catch all errors during api lifetime
+
 ## [1.1.6] / [1.1.10] - 2017-11-14
 ### Added
 - Am-Mailing in ApiBootstrap
