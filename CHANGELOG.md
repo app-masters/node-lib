@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.1.15] - 2017-11-20
+## [1.1.15 / 1.1.16] - 2017-11-20
 ### Fixed
 - Morgan console log fixed
 
