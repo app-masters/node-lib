@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.15] - 2017-11-20
+### Fixed
+- Morgan console log fixed
+
 ## [1.1.13 / 1.1.14] - 2017-11-20
 ### Added
 - nodeRestful added with registerMultipleRoutes
