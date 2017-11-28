@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.18] - 2017-11-27
+### Fixed
+- updateOptions added to registerMultipleRoutes
+
 ## [1.1.15 / 1.1.17] - 2017-11-21
 ### Fixed
 - Morgan console log fixed
