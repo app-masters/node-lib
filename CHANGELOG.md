@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.19] - 2017-11-29
+### Fixed
+- shouldUseAtomicUpdate must be false to "pre" hooks work as expected
+
 ## [1.1.18] - 2017-11-27
 ### Fixed
 - updateOptions added to registerMultipleRoutes
