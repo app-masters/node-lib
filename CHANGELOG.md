@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.1.22/1.1.23] - 2017-12-15
+## [1.1.22/1.1.24] - 2017-12-15
 ### Added
 - exposeModelMethods added to AMRouter and nodeResful
 
