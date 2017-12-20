@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.26] - 2017-12-20
+### Added
+- extraRoutes on nodeRestful
+
 ## [1.1.25] - 2017-12-18
 ### Changed
 - token size limited
