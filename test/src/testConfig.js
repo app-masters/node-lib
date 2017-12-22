@@ -10,6 +10,7 @@ let denyAccess = {
     mobile: []
 };
 
+let port = 3456;
 
 const mail = {
     from: 'noreply@appmasters.io',
@@ -39,10 +40,12 @@ envs.development = {
     security: {
         disabledOnDev: false,
         secret: "someSecret",
-        denyAccess
+        denyAccess,
+        singleLoginSignup: true
     },
     mail: mail,
-    invite
+    invite,
+    port
 };
 
 envs.test = envs.development;
@@ -55,7 +58,8 @@ envs.production = {
     security: {
         secret: "someSecret",
         denyAccess
-    }
+    },
+    port
 };
 
 envs.staging = envs.production;

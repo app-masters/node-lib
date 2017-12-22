@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.27] - 2017-12-22
+### Added
+- config.security.singleLoginSignup added, to allow user to login/signup at login route
+
 ## [1.1.26] - 2017-12-20
 ### Added
 - extraRoutes on nodeRestful
