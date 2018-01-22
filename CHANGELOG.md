@@ -6,9 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.1.29/1.1.30] - 2018-01-03
+## [1.1.29/1.1.31] - 2018-01-03
 ### Added
 - Fixing "missing password" on login
+### Changed
+- 'del' changed to 'delete'
 
 ## [1.1.27/1.1.28] - 2017-12-22
 ### Added
