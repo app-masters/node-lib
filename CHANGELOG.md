@@ -6,11 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.1.32/1.1.33] - 2018-02-02
+## [1.1.32/1.1.34] - 2018-02-02
 ### Changed
 - Fixed inviteSchema for tests
 - AMInvite.getUserLink() little refactor
-- AMInvite.addInvite() removed inviteUrl from body and added all the fields
+- AMInvite.addInvite() removed inviteUrl from body and added all the fields and now send the e-mail directly
+- Catching errors of send e-mail
 
 ## [1.1.29/1.1.31] - 2018-01-03
 ### Added
