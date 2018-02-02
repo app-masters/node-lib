@@ -1,18 +1,31 @@
-var restful = require('node-restful');
-var mongoose = restful.mongoose;
-var ObjectId = mongoose.Schema.Types.ObjectId;
+const restful = require('node-restful');
 const mongooseIt = require('@app-masters/mongoose-it').mongooseIt;
+const mongoose = restful.mongoose;
+const ObjectId = mongoose.Schema.Types.ObjectId;
 
-let schema = {
-    userInvite: {type: ObjectId, ref: 'user'},
+const schema = {
+    user: {type: ObjectId, ref: 'user'},
+    main: Boolean,
+
+    // If main, count the clicks on the link
+    clickCount: {
+        type: Number,
+        min: 0,
+        default: 0
+    },
+    clicks: [{type: Date}],
+
+    // If not main, invite is linked to another person
+    userAccepted: {type: ObjectId, ref: 'user'},
+    name: {type: String},
     email: {type: String},
     phone: {type: String},
     accepted: Boolean,
-    acceptedAt: Date,
-    userAccepted:{type: ObjectId, ref: 'user'},
-    invitedBy: {type: ObjectId}
+    acceptedAt: {type: Date},
+    inviteSent: {type: Date}
 };
-let options = {
+
+const options = {
     timestamps: {
         createdAt: 'created_at',
         updatedAt: 'updated_at'
@@ -23,7 +36,6 @@ let options = {
 
 var mongooseSchema = mongoose.Schema(schema, options);
 mongooseSchema.plugin(mongooseIt);
-
 mongoose.model('invite', mongooseSchema);
 
 module.exports = mongooseSchema;

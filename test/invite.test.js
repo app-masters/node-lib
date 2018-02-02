@@ -14,9 +14,9 @@ require('./src/inviteSchema');
 const connectionData = require('./src/connectionData');
 
 // Test data
-let emailToInvite = 'tiago@tiagogouvea.com.br';
-let phoneToInvite = '32988735683';
-let emailToInviteAndSignup = "tiago@appmasters.io";
+let emailToInvite = 'jfbaraky@gmail.com';
+let phoneToInvite = '32984325051';
+let emailToInviteAndSignup = "baraky.appmasters@gmail.com";
 let personsToInvite = [
     {email: 'email@email.com', phone: '99837495'},
     {email: emailToInviteAndSignup, phone: '99833743'}
@@ -58,7 +58,7 @@ test('Invite one person', async () => {
     invite = await AMInvite.addInvite(user, emailToInvite, phoneToInvite);
     // console.log("--invite--", invite);
     // console.log("--invite--", invite);
-    expect(invite.userInvite._id).toBe(user._id);
+    expect(invite.user._id).toBe(user._id);
     expect(invite.email).toBe(emailToInvite);
 });
 
@@ -82,7 +82,9 @@ test('Invite multiple person', async () => {
 
 test('Accept invite (user signup) with callback', async (done) => {
     AMInvite.setAcceptCallback((invite=>{
-        // console.log("acccccepted",invite);
+        console.log('___________________________________');
+        console.log(invite);
+        console.log('___________________________________');
         expect(invite.accepted).toBe(true);
         done();
     }));
