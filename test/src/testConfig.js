@@ -12,6 +12,15 @@ let denyAccess = {
 
 let port = 3456;
 
+const message = {
+    feedback: {
+        to: "igor.phelype@gmail.com",
+        subject: "Feedback de uso",
+        saveToDb: true,
+        fields: {name: 'Nome', gender: 'Sexo', text: 'Mensagem'}
+    }
+};
+
 const mail = {
     from: 'noreply@appmasters.io',
     fromName: 'App Masters',
@@ -44,9 +53,10 @@ envs.development = {
         denyAccess,
         singleLoginSignup: true
     },
-    mail: mail,
+    mail,
     invite,
-    port
+    port,
+    message
 };
 
 envs.test = envs.development;

@@ -55,7 +55,13 @@ const schema = {
             date: Date,
             denied: Boolean
         }
-    }
+    },
+    deleted: {
+        type: Boolean,
+        default: false
+    },
+    removedAt: Date,
+    lastAccessDate: Date
 };
 
 const options = {
