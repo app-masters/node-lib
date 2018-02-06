@@ -94,6 +94,9 @@ AMInvite.setAcceptCallback((invite=>{
 
 ```
 
+#### Examples:
+- https://gitlab.com/app-masters/lowcarb-app/blob/dev/api/src/app/routes/invite.js
+
 ````
     http://emagrecaja.com.br/convite/0197039120321730918
     http://eisaquestao.ufjf.br/amigo/0197039120321730918
