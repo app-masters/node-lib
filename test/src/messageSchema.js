@@ -6,7 +6,8 @@ var Mixed = mongoose.Schema.Types.Mixed;
 let schema = {
     user: {type: ObjectId, ref: 'user'},
     messageKey: String,
-    values: Mixed
+    values: Mixed,
+    emailSentAt: Date
 };
 let options = {
     timestamps: {
