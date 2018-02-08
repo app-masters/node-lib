@@ -7,7 +7,8 @@ let dbUrl = "mongodb://127.0.0.1/node-lib_test_db";
 let connection, Foo, Bar;
 
 function createConnectionAndSchemas(plugin) {
-    connection = mongoose.createConnection(dbUrl);
+    mongoose.Promise = global.Promise;
+    let connection = mongoose.connect(dbUrl, {useMongoClient: true});
     let result = createSchemas(connection,plugin);
     result.connection = connection;
     return result;

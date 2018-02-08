@@ -118,12 +118,14 @@ test('Get users active', async () => {
     expect(response2.usersActive).toBeGreaterThan(response.usersActive);
 });
 
-test('User active test', async () => {
-    let payload = {
-        _id: '5a5d358faf1a4c0014b75b97'
-    }
-    await amAuth._jwtStrategy(payload, (err, user) => {
-        // console.log(err, user);
-        expect(user.lasAcessDate).not.toBeNull();    
-    });
+test('Get received messages', async () => {
+    let period = xDaysAgo(1);
+    let response = await stats.receveidMessages(period);
+    // console.log(response, period);
+    expect(response.receveidMessages).not.toBeNull();
+    period = xDaysAgo(14);
+    let response2 = await stats.receveidMessages(period);
+    // console.log(response2, period);
+    expect(response2.receveidMessages).not.toBeNull();
+    expect(response2.receveidMessages).toBeGreaterThan(response.receveidMessages);
 });
