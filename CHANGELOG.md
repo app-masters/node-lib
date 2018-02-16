@@ -6,9 +6,28 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.1.29/1.1.30] - 2018-01-03
+## [1.1.35] - 2018-02-08
+### Added
+- Message
+- Stats
+- User tests 
+- AMAuth.certifyLastAtributes added. This method certifies that the new added user atributes is correct
+### Changed
+- Fields added on User: lastAccessDate, initialClient, initialClientVersion, lastClient, lastClientVersion
+- AMAuth.requireAuth now calls the AMAuth.certifyLastAtributes passing the headers and the actual user
+
+## [1.1.32/1.1.34] - 2018-02-02
+### Changed
+- Fixed inviteSchema for tests
+- AMInvite.getUserLink() little refactor
+- AMInvite.addInvite() removed inviteUrl from body and added all the fields and now send the e-mail directly
+- Catching errors of send e-mail
+
+## [1.1.29/1.1.31] - 2018-01-03
 ### Added
 - Fixing "missing password" on login
+### Changed
+- 'del' changed to 'delete'
 
 ## [1.1.27/1.1.28] - 2017-12-22
 ### Added

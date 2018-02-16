@@ -12,9 +12,19 @@ let denyAccess = {
 
 let port = 3456;
 
+const message = {
+    feedback: {
+        to: "igor.phelype@gmail.com",
+        subject: "Feedback de uso",
+        saveToDb: true,
+        fields: {name: 'Nome', gender: 'Sexo', text: 'Mensagem'}
+    }
+};
+
 const mail = {
     from: 'noreply@appmasters.io',
     fromName: 'App Masters',
+    appName: 'App of Masters',
     host: 'mail.appmasters.io',
     port: 2525,
     auth: {
@@ -28,7 +38,7 @@ const mail = {
 
 const invite = {
     singleUserLink: true,
-    baseUrlAndRoute: 'http://publicurl.com/invite/',
+    baseUrlAndRoute: 'http://publicurl.com/invite', // Don't use / on the end
     sendEmail: true
 };
 
@@ -43,9 +53,10 @@ envs.development = {
         denyAccess,
         singleLoginSignup: true
     },
-    mail: mail,
+    mail,
     invite,
-    port
+    port,
+    message
 };
 
 envs.test = envs.development;

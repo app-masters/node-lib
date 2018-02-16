@@ -11,7 +11,8 @@ const schema = {
     local: {
         email: String,
         password: String,
-        newPassWordRequestHash: String
+        newPassWordRequestHash: String,
+        phone: String
     },
     facebook: {
         id: String,
@@ -55,7 +56,17 @@ const schema = {
             date: Date,
             denied: Boolean
         }
-    }
+    },
+    deleted: {
+        type: Boolean,
+        default: false
+    },
+    removedAt: Date,
+    lastAccessDate: Date,
+    initialClient: String,
+    lastClient: String,
+    initialClientVersion: String,
+    lastClientVersion: String,
 };
 
 const options = {
