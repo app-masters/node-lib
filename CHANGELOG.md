@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.1.36/1.1.37] - 2018-02-16
+## [1.1.36/1.1.40] - 2018-02-16
 ### Added
 - sign method that accept the full user object
 
