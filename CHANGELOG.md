@@ -6,11 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.36] - 2018-02-16
+### Added
+- sign method that accept the full user object
+
 ## [1.1.35] - 2018-02-08
 ### Added
-- Message
-- Stats
-- User tests 
+- Message class, to easy send emails with custom fields, and store then on database
+- Stats class, to quickly create dashboard data
 - AMAuth.certifyLastAtributes added. This method certifies that the new added user atributes is correct
 ### Changed
 - Fields added on User: lastAccessDate, initialClient, initialClientVersion, lastClient, lastClientVersion

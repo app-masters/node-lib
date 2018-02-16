@@ -31,6 +31,7 @@ apiBootstrap.listen(app);
         singleLoginSignup:true // will enable login and signup at same route: /login/
     }
 }
+```
 
 # nodeRestful
 
@@ -110,6 +111,10 @@ AMInvite.setAcceptCallback((invite=>{
     http://emagrecaja.com.br/convite/0197039120321730918
     http://eisaquestao.ufjf.br/amigo/0197039120321730918
 ````
+
+# Message
+
+# Stats
 
 # Development
 
