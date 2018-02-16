@@ -23,6 +23,15 @@ require('./app/routes')(app);
 apiBootstrap.listen(app);
 ```
 
+### Config
+
+``` 
+{
+    security:{
+        singleLoginSignup:true // will enable login and signup at same route: /login/
+    }
+}
+
 # nodeRestful
 
 Easy [node-restful](https://github.com/baugarten/node-restful) use with less code and more resources.
@@ -99,6 +108,11 @@ AMInvite.setAcceptCallback((invite=>{
     http://eisaquestao.ufjf.br/amigo/0197039120321730918
 ````
 
+# Development
+
+```
+npm install
+```
 
 # Change Log
 

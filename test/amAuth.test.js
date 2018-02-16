@@ -36,11 +36,41 @@ test('Create connection and one user', async () => {
 test('singleLoginSignup - login', async () => {
     const res = mockRes();
     // res.status(200).send();
-    const done= (a,b,c) => {console.log("DONE > ",a,b,c)};
+    const done = (a, b, c) => {
+        console.log("DONE > ", a, b, c)
+    };
     const req = {body: {email: user.local.email, password: user.local.email}};
     AMAuth.localLogin(req, res, done);
     // expect(res.status).toHaveBeenCalledWith(200);
     // expect(res.send).toHaveBeenCalled();
 
     // AMAuth.(req, user.local.email, user.local.email, done);
+});
+
+
+
+
+test('signupUser with full data', async () => {
+    const res = {send: (data) => {
+        console.log("send > ",data)
+    }};
+    const done = (a, b, c) => {
+        console.log("DONE > ", a, b, c)
+    };
+    const user = {
+        name: "Tiago",
+        local: {
+            email: "tiago@tiagogouvea.com.br",
+            password: "sosecret"
+        },
+        data: {
+            gender: "Male"
+        }
+    };
+    const req = {body: {user}};
+    // const result = await AMAuth.signupUser(req, res, done);
+    const result = await AMAuth.sign(user);
+
+    expect(result).not.toBeNull();
+    expect(result.local.email).toBe(user.local.email);
 });

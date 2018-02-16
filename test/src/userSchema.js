@@ -37,7 +37,7 @@ const schema = {
         default: 'user'
     },
     data: {
-
+        gender: String
     },
     notification: {
         android: {
