@@ -117,6 +117,7 @@ AMInvite.setAcceptCallback((invite=>{
 #### Configuration
     - On the config.js file, set the message config (this file will be used as a parameter in the message.setup(config) method).
     - The example bellow sets a configuration object for the 'feedback' message key that will save on the de dataBase (saveToDb: boolean).
+    - message.fields sets the fields expected and the correspond string that will be displayed to the final user.
 ```javascript
 const message = {
     feedback: {
