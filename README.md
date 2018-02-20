@@ -113,6 +113,25 @@ AMInvite.setAcceptCallback((invite=>{
 ````
 
 # Message
+    Allow to manage the message sending.
+#### Configuration
+    - On the config.js file, set the message config (this file will be used as a parameter in the message.setup(config) method).
+    - The example bellow sets a configuration object for the 'feedback' message key that will save on the de dataBase (saveToDb: boolean).
+```javascript
+const message = {
+    feedback: {
+        to: "igor.phelype@gmail.com",
+        subject: "Feedback de uso",
+        saveToDb: true,
+        fields: {name: 'Nome', gender: 'Sexo', text: 'Mensagem'}
+    }
+};
+```
+#### Usage
+```javascript
+// Router example
+router.post('/message/:messageKey', Message.sendMessage);
+```
 
 # Stats
 
