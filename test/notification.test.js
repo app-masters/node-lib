@@ -49,7 +49,9 @@ test('Send notification', async () => {
     let config = {credential, databaseURL: 'https://good-burger.firebaseio.com'};
     let result = notification.setup(config);
     expect(result).toBe(true);
-    const token = 'flHQT5RETSg:APA91bG3Go3LXcuV2V-ATLJFDLzeQ5z6mQA22JEuyRedWio1Jfj6VAXV7qbgoofu6TKZPWB86Li74PQT26Drth6pgwKKhtxr5-VQNui-iusvstcVHT7mtMv0arquyRWpNhAFWJAXUY_h';
+    const users = {
+        token: 'flHQT5RETSg:APA91bG3Go3LXcuV2V-ATLJFDLzeQ5z6mQA22JEuyRedWio1Jfj6VAXV7qbgoofu6TKZPWB86Li74PQT26Drth6pgwKKhtxr5-VQNui-iusvstcVHT7mtMv0arquyRWpNhAFWJAXUY_h'
+    };
     let payload = {
         notification: {
             title: 'Teste',
@@ -60,7 +62,7 @@ test('Send notification', async () => {
             otherContent: 'Only string right?'
         }
     };
-    notification.send(token, payload);
+    notification.send(users, payload);
     // expect(result.successCount).toBe(1);
 });
 

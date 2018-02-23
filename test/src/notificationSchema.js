@@ -36,6 +36,9 @@ const schema = {
     schedule: {
         type: Date
     },
+    failed: {
+        type: Date
+    },
     user: {
         type: ObjectId,
         required: true,
