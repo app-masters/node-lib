@@ -3,27 +3,26 @@ Notification Schema, defines the user who will receive, what it is, type of inte
 if it was sended, received and seed - it has timestramp for all this fields.
 */
 const restful = require('node-restful');
-const softDelete = require('@app-masters/node-lib').amSoftDelete;
 const mongoose = restful.mongoose;
 
 const ObjectId = mongoose.Schema.Types.ObjectId;
+const Mixed = mongoose.Schema.Types.Mixed;
 
 const schema = {
-    title: {
-        type: String,
-        required: true
-    },
-    body: {
-        type: String,
-        required: true
-    },
-    interactionType: {
-        type: String,
-        required: true
-    },
-    content: {
-        type: String,
-        required: true
+    payload: {
+        notification: {
+            title: {
+                type: String,
+                required: true
+            },
+            body: {
+                type: String,
+                required: true
+            }
+        },
+        data:{
+            type: Mixed
+        }
     },
     sent: {
         type: Date
@@ -55,7 +54,7 @@ const options = {
 };
 
 const mongooseSchema = mongoose.Schema(schema, options);
-mongooseSchema.plugin(softDelete);
+// mongooseSchema.plugin(softDelete);
 
 const model = mongoose.model('notification', mongooseSchema);
 

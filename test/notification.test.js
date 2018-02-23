@@ -8,6 +8,9 @@ var app = express();
 const apiBootstrap = require('../lib/apiBootstrap');
 require('./src/userSchema');
 require('./src/inviteSchema');
+require('./src/notificationSchema');
+const notification = require('../lib/notification');
+
 
 const connectionData = require('./src/connectionData');
 //
@@ -26,10 +29,6 @@ const connectionData = require('./src/connectionData');
 // let newUser = null;
 // let newUsers = null;
 
-let notificationConfig = {
-    serviceAccount: ''
-};
-
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
 
 // test('ApiBootstrap node-lib', () => {
@@ -46,23 +45,23 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
 // });
 
 test('Send notification', async () => {
-    const notifiction = require('../lib/notification');
-
-    // Setup
-    const serviceAccount = require('./src/serviceAccountKey.json');
-    let config = {serviceAccount};
-    let result = notifiction.setup(config);
+    const credential = require('./src/serviceAccountKey');
+    let config = {credential, databaseURL: 'https://good-burger.firebaseio.com'};
+    let result = notification.setup(config);
     expect(result).toBe(true);
-
-    let body = {
-        title: "Teste",
-        body: "Teste de notificação",
+    const token = 'flHQT5RETSg:APA91bG3Go3LXcuV2V-ATLJFDLzeQ5z6mQA22JEuyRedWio1Jfj6VAXV7qbgoofu6TKZPWB86Li74PQT26Drth6pgwKKhtxr5-VQNui-iusvstcVHT7mtMv0arquyRWpNhAFWJAXUY_h';
+    let payload = {
+        notification: {
+            title: 'Teste',
+            body: 'Teste de notificação'
+        },
         data: {
-            content: "Anything goes here"
+            content: 'Only strings goes here',
+            otherContent: 'Only string right?'
         }
     };
-    result = await notifiction.send("fmPw7Ekytgo:APA91bGIQKnwNR8Or7IjDJ9E4_fzFi3Uqi4qDOUCYOe19NPcWHzWgZDWa8oBZzDKB_nKBow1GMG6MVSsm8TedUU-5v6UT2kOB1Wr2d7v9M2LimfOtuibKMfZ9CrMSjRoR8raPQh6OKfG",body);
-    expect(result.successCount).toBe(1);
+    notification.send(token, payload);
+    // expect(result.successCount).toBe(1);
 });
 
 
