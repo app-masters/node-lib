@@ -8,61 +8,44 @@ var app = express();
 const apiBootstrap = require('../lib/apiBootstrap');
 require('./src/userSchema');
 require('./src/inviteSchema');
+require('./src/notificationSchema');
+require('./src/messageSchema');
+
+const notification = require('../lib/notification');
+
 
 const connectionData = require('./src/connectionData');
-//
-// // Test data
-// let emailToInvite = 'tiago@tiagogouvea.com.br';
-// let phoneToInvite = '32988735683';
-// let emailToInviteAndSignup = "tiago@appmasters.io";
-// let personsToInvite = [
-//     {email: 'email@email.com', phone: '99837495'},
-//     {email: emailToInviteAndSignup, phone: '99833743'}
-// ];
-//
-// let invite = null;
-// let invites = null;
-// let user = null;
-// let newUser = null;
-// let newUsers = null;
-
-let notificationConfig = {
-    serviceAccount: ''
-};
 
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
 
-// test('ApiBootstrap node-lib', () => {
-//     let result = apiBootstrap.setup(app, envs, packag, passport);
-//     apiBootstrap.listen(app);
-//     expect(result).toBe(true);
-// });
-//
-// test('Create connection and one user', async () => {
-//     let db = connectionData.createConnectionAndSchemas();
-//     await db.connection.model('user').find({}).remove();
-//     user = await connectionData.createUserRecords(1);
-//     expect(user).not.toBeNull();
-// });
-
-test('Send notification', async () => {
-    const notifiction = require('../lib/notification');
-
-    // Setup
-    const serviceAccount = require('./src/serviceAccountKey.json');
-    let config = {serviceAccount};
-    let result = notifiction.setup(config);
+test('ApiBootstrap node-lib', () => {
+    let result = apiBootstrap.setup(app, envs, packag, passport);
+    apiBootstrap.listen(app);
     expect(result).toBe(true);
-
-    let body = {
-        title: "Teste",
-        body: "Teste de notificação",
-        data: {
-            content: "Anything goes here"
-        }
-    };
-    result = await notifiction.send("fmPw7Ekytgo:APA91bGIQKnwNR8Or7IjDJ9E4_fzFi3Uqi4qDOUCYOe19NPcWHzWgZDWa8oBZzDKB_nKBow1GMG6MVSsm8TedUU-5v6UT2kOB1Wr2d7v9M2LimfOtuibKMfZ9CrMSjRoR8raPQh6OKfG",body);
-    expect(result.successCount).toBe(1);
 });
 
+test('Create connection', async () => {
+    let db = connectionData.createConnectionAndSchemas();
+    expect(db).not.toBeNull();
+});
+
+test('Send notification', async () => {
+    const users =
+        {
+            _id: '5980d6e14a54b900113ff905',
+            token: 'flHQT5RETSg:APA91bG3Go3LXcuV2V-ATLJFDLzeQ5z6mQA22JEuyRedWio1Jfj6VAXV7qbgoofu6TKZPWB86Li74PQT26Drth6pgwKKhtxr5-VQNui-iusvstcVHT7mtMv0arquyRWpNhAFWJAXUY_h'
+        };
+    let payload = {
+        notification: {
+            title: 'Olá',
+            body: 'Bem vindo!'
+        },
+        data: {
+            content: 'Only strings goes here',
+            otherContent: 'Only string right?'
+        }
+    };
+    notification.send(users, payload);
+    // expect(result.successCount).toBe(1);
+});
 

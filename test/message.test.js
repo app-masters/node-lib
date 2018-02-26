@@ -13,6 +13,7 @@ const connectionData = require('./src/connectionData');
 require('./src/userSchema');
 require('./src/inviteSchema');
 require('./src/messageSchema');
+require('./src/notificationSchema');
 
 const message = require('../lib').message;
 

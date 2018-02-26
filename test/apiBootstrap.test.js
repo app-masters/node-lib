@@ -9,6 +9,7 @@ const apiBootstrap = require('../lib/apiBootstrap');
 const AMMailing = require('../lib/am-mailing');
 require('./src/userSchema');
 require('./src/inviteSchema');
+require('./src/notificationSchema');
 
 const testEmail = 'baraky.appmasters@gmail.com';
 
