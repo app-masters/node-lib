@@ -21,6 +21,12 @@ const message = {
     }
 };
 
+// notification config example
+let notification = {
+    credential: require('./serviceAccountKey'),
+    databaseURL: 'https://good-burger.firebaseio.com'
+};
+
 const mail = {
     from: 'noreply@appmasters.io',
     fromName: 'App Masters',
@@ -56,7 +62,8 @@ envs.development = {
     mail,
     invite,
     port,
-    message
+    message,
+    notification
 };
 
 envs.test = envs.development;

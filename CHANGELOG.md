@@ -6,7 +6,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.1.36/1.1.42] - 2018-02-16
+## [1.1.45/1.1.47] - 2018-02-26
+### Added
+- Notification schema added
+- Notification class to manage fcm messaging added
+
+## [1.1.42/1.1.44] - 2018-02-16
+### Changed
+- AMMailing.sendEmail now throws error on a catch situation
+- Message.send is the router method now. It receives req, res and next to follow the patterns.
+
+## [1.1.36/1.1.41] - 2018-02-16
 ### Added
 - sign method that accept the full user object
 
