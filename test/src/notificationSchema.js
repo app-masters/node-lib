@@ -27,18 +27,19 @@ const schema = {
     sent: {
         type: Date
     },
-    received: {
-        type: Date
-    },
-    seen: {
-        type: Date
-    },
-    schedule: {
-        type: Date
-    },
+    // received: {
+    //     type: Date
+    // },
+    // seen: {
+    //     type: Date
+    // },
+    // schedule: {
+    //     type: Date
+    // },
     failed: {
         type: Date
     },
+    errorMessage: String,
     user: {
         type: ObjectId,
         required: true,
@@ -59,6 +60,6 @@ const options = {
 const mongooseSchema = mongoose.Schema(schema, options);
 // mongooseSchema.plugin(softDelete);
 
-const model = mongoose.model('notification', mongooseSchema);
+mongoose.model('notification', mongooseSchema);
 
 module.exports = mongooseSchema;

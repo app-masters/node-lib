@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.45/1.1.47] - 2018-02-26
+### Added
+- Notification schema added
+- Notification class to manage fcm messaging added
+
 ## [1.1.42/1.1.44] - 2018-02-16
 ### Changed
 - AMMailing.sendEmail now throws error on a catch situation
