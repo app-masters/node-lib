@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.1.49/1.1.50] - 2018-02-16
+## [1.1.49/1.1.51] - 2018-03-01
 ### Added
 - Notification.saveUserToken added
 ### Changed
