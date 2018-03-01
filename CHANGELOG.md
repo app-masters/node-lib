@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.49/1.1.50] - 2018-02-16
+### Added
+- Notification.saveUserToken added
+### Changed
+- Notification.send changed to support the new way to save the tokens on the user schema
+- Certifying if the 'notification.[platform].token' exists on Notification.setup calling the amauth.certifySchemaAttributes
+
 ## [1.1.45/1.1.48] - 2018-02-26
 ### Added
 - Notification schema added
