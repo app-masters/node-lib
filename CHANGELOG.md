@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.53/1.1.53] - 2018-03-02
+### Changed
+- Fixing promise issues on findOneAndUpdate
+- Fixing errors on addUserToken
+- AmAuth on login now returns the notification object
+
 ## [1.1.49/1.1.52] - 2018-03-01
 ### Added
 - Notification.saveUserToken added
