@@ -6,16 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.1.57] - 2018-03-06
+## [1.1.58] - 2018-03-06
 ### Changed
 - Added a new error catcher on the notification.send method. Now it verifies if it has tokens.lenght > 0 before sending notifications
 
-## [1.1.54/1.1.56] - 2018-03-05
+## [1.1.54/1.1.57] - 2018-03-05
 ### Changed
 - Calling the getUserData on the save token method on notification
 - deleting all console.log
 - Fixed amAuth client-version
-- Validating tokens before sending
 
 ## [1.1.53] - 2018-03-02
 ### Changed
