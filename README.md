@@ -134,9 +134,9 @@ const message = {
 router.post('/message/:messageKey', Message.sendMessage);
 ```
 
-## Notification (api)
+# Notification (api)
 
-### Firebase initialize and lib setup
+#### Firebase initialize and lib setup
 - The notification config object must look exactly like this
 ```javascript
 // you can do this way
@@ -168,12 +168,10 @@ if(config.notification){
 ```
 - But if you don't want to use the apiBoostrap just call: `Notification.setup(notification)`
 
-### Lib methods
+#### Lib methods
 
-#### setup
+##### setup
 - Receives the config object and sets its credentials on the firebase-admin instance
-
----
 
 # Stats
 
