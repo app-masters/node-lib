@@ -62,7 +62,7 @@ envs.development = {
     mail,
     invite,
     port,
-    message,
+    // message,
     notification
 };
 
@@ -70,7 +70,7 @@ envs.test = envs.development;
 
 envs.production = {
     database: {
-        url: "mongo"
+        url: null
     },
     rollbar: rollbar,
     security: {
