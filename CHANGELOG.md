@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.1.59/1.1.64] - 2018-03-09
+## [1.1.59/1.1.65] - 2018-03-09
 ### Changed
 - Forcing prod config, to not store sensible database url data on file
 
