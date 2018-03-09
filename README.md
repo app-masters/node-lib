@@ -25,7 +25,7 @@ apiBootstrap.listen(app);
 
 ### Config
 
-``` 
+```
 {
     security:{
         singleLoginSignup:true // will enable login and signup at same route: /login/
@@ -39,15 +39,15 @@ Easy [node-restful](https://github.com/baugarten/node-restful) use with less cod
 
 ### registerRoute
 
-Will register a route with node-restful. 
+Will register a route with node-restful.
 
-``` 
+```
 let route = {
     route: '/api/user',
     modelName: 'user',
     schema: mySchema,
 };
-    
+
 nodeRestful.registerRoute(app, router, routeParams);
 ```
 
@@ -58,7 +58,7 @@ Do same as registerRoute, but receiving an array of routes.
 
 ## exposeModelMethods
 
-Allow to call a model method directly from rest route. 
+Allow to call a model method directly from rest route.
 
 Eg: `http://myapi.com/user/5a3168e1f60a471f02fb92f5/sendGreetings` will call referred user `user.sendGreetings()`.
 
@@ -68,14 +68,14 @@ If the method don't exists on mongoose model, will check on model instance, like
 
 To all of this work you just need pass `exposeModelMethods` to registerRoute.
 
-``` 
+```
 let route = {
     route: '/api/user',
     modelName: 'user',
     schema: mySchema,
     exposeModelMethods: ['sendGreetings','getMoreData','sendMoreSpam']
 };
-    
+
 nodeRestful.registerRoute(app, router, routeParams);
 ```
 
@@ -83,7 +83,7 @@ nodeRestful.registerRoute(app, router, routeParams);
 
 # amInvite
 
-Add invite key on api config file: 
+Add invite key on api config file:
 
 ```
 envs.development = {
@@ -133,6 +133,45 @@ const message = {
 // Router example
 router.post('/message/:messageKey', Message.sendMessage);
 ```
+
+# Notification (api)
+
+#### Firebase initialize and lib setup
+- The notification config object must look exactly like this
+```javascript
+// you can do this way
+const firebaseServiceAccount = require('path-to-your/service-account.json');
+// or this way (the firebaseServiceAccount must have this structure)
+const firebaseServiceAccount = {
+    'type': 'service_account',
+    'project_id': '',
+    'private_key_id': '',
+    'private_key': '-----BEGIN PRIVATE KEY----------END PRIVATE KEY-----\n',
+    'client_email': '',
+    'client_id': '',
+    'auth_uri': '',
+    'token_uri': '',
+    'auth_provider_x509_cert_url': '',
+    'client_x509_cert_url': ''
+};
+
+const notification = {
+    credential: firebaseServiceAccount,
+    databaseURL: ''
+};
+```
+- Our apiBootstrap will handle this object and setup the Notification
+```javascript
+if(config.notification){
+    Notification.setup(config.notification);
+}
+```
+- But if you don't want to use the apiBoostrap just call: `Notification.setup(notification)`
+
+#### Lib methods
+
+##### setup
+- Receives the config object and sets its credentials on the firebase-admin instance
 
 # Stats
 
