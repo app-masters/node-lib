@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.59/1.1.67] - 2018-03-09
+### Changed
+- Forcing prod config, to not store sensible database url data on file
+
 ## [1.1.58] - 2018-03-06
 ### Changed
 - Added a new error catcher on the notification.send method. Now it verifies if it has tokens.lenght > 0 before sending notifications
