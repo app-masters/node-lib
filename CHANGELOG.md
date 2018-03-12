@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.68] - 2018-03-12
+### Fixed
+- Util isValidObjectId fix
+
 ## [1.1.59/1.1.67] - 2018-03-09
 ### Changed
 - Forcing prod config, to not store sensible database url data on file
