@@ -33,7 +33,7 @@ test('Create connection', async () => {
 test('Send notification', async () => {
     const userModel = mongoose.model('user');
     let user = null;
-    await userModel.findOne({_id: '5a7ae1a0f9305b00145344f1'}).then((response) => user = response).catch(error => console.error(error));
+    await userModel.findOne({_id: '59cf9ca299fa324ffff06c13'}).then((response) => user = response).catch(error => console.error(error));
     let payload = {
         notification: {
             title: 'My test - title',

@@ -6,9 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.1.68] - 2018-03-12
+## [1.1.69] - 2018-03-12
 ### Fixed
 - Util isValidObjectId fix
+
+## [1.1.68] - 2018-03-12
+### Changed
+- Fixing an error on the save user token, preventing injection and user token errors
 
 ## [1.1.59/1.1.67] - 2018-03-09
 ### Changed
