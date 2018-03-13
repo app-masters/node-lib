@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.70] - 2018-03-13
+### Fixed
+- Setting NODE_ENV as 'development' on the bootstrap
+
 ## [1.1.69] - 2018-03-12
 ### Fixed
 - Util isValidObjectId fix
