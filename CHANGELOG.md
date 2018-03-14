@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.72] - 2018-03-14
+### Fixed
+- Adding the notification.notifyAll method to easily send notifications to everyone
+
 ## [1.1.70/1.1.71] - 2018-03-13
 ### Fixed
 - Setting NODE_ENV as 'development' on the bootstrap
