@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.1.72/1.1.73] - 2018-03-14
+## [1.1.72/1.1.74] - 2018-03-14
 ### Fixed
 - Adding the notification.notifyAll method to easily send notifications to everyone
 - Adding the notification.notifyAdmin method to easily send notifications to all admins
