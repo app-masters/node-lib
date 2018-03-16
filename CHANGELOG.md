@@ -6,10 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.1.72] - 2018-03-16
+## [1.1.72/1.1.76] - 2018-03-14
 ### Fixed
-- AMMailing getting the correct config
+- Adding the notification.notifyAll method to easily send notifications to everyone
+- Adding the notification.notifyAdmin method to easily send notifications to all admins
+- Changing the message on notifyAdmin method
 
+- AMMailing getting the correct config
 ## [1.1.70/1.1.71] - 2018-03-13
 ### Fixed
 - Setting NODE_ENV as 'development' on the bootstrap
