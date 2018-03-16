@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.77] - 2018-03-16
+### Fixed
+- AMMailing now saves the correct config
+
 ## [1.1.72/1.1.76] - 2018-03-14
 ### Fixed
 - Adding the notification.notifyAll method to easily send notifications to everyone
