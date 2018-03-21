@@ -1,10 +1,20 @@
 /* global test, expect, jest, jasmine, */
 const ModelSequelize = require('../lib/modelSequelize');
 const sequelize = require('./src/bootstrap');
+const UserModel = require('./src/userSequelizeSchema');
+const RoleModel = require('./src/roleSequelizeSchema');
+
+class Role extends ModelSequelize {}
+
+class RoleInstance {
+    static getTitle () {
+        return this.title;
+    };
+}
 
 class User extends ModelSequelize {
     static getActives () {
-        return this.find({active: true, User});
+        return this.find({active: true}, 'role', 'name');
     }
 }
 
@@ -22,11 +32,14 @@ test('Sequelize configuration', () => {
     expect(typeof sequelize).toBe('object');
 });
 
-const UserModel = require('./src/UserSequelizeSchema');
+test('Model setup', () => {
+    Role.setup(RoleModel, RoleInstance);
+    User.setup(UserModel, UserInstance, [Role]);
+    expect(true).toBe(true);
+});
 
 let user;
 test('User find', async () => {
-    User.setup(UserModel, UserInstance);
     user = await User.findById(1);
     expect(typeof user).toBe('object');
 });
@@ -36,17 +49,11 @@ test('User class method', async () => {
     expect(typeof actives).toBe('object');
 });
 
-test('User instance method', async () => {
-    expect(user.active).toBe(false);
-    user.activate();
-    expect(user.active).toBe(true);
-});
-
 test('User create', async () => {
     const userObj = {
         name: ['José', 'João', 'Maria', 'Carolina', 'Ana', 'Karen', 'Paulo', 'Breno'][Math.floor(Math.random() * 6)],
         age: Math.floor(Math.random() * 7) + 20,
-        height: Number((Math.floor(Math.random() * 35)/100).toFixed(2)) + 1.55,
+        height: Number((Math.floor(Math.random() * 35) / 100).toFixed(2)) + 1.55,
         active: false,
         gender: ['male', 'female'][Math.floor(Math.random() * 2)]
     };
@@ -54,14 +61,36 @@ test('User create', async () => {
     expect(typeof user).toBe('object');
 });
 
+test('User instance method', async () => {
+    expect(user.active).toBe(false);
+    user.activate();
+    expect(user.active).toBe(true);
+    expect(user.getName()).toBe(user.name);
+});
+
 test('User findOne', async () => {
     user = await User.findOne({id: user.id});
     expect(typeof user).toBe('object');
 });
 
+test('User findOne populated', async () => {
+    user = await User.findOne({id: user.id}, 'role');
+    expect(user.role.getTitle()).toBe('user');
+});
+
+test('User find populated', async () => {
+    user = await User.findById(user.id, 'role');
+    expect(user.role.getTitle()).toBe('user');
+});
+
 test('User update', async () => {
-    console.log(user);
+    expect(user.active).toBe(false);
     user = await User.update({id: user.id}, {active: true});
-    console.log(user[0].active);
-    expect(typeof user).toBe('object');
+    user = user[0];
+    expect(user.active).toBe(true);
+});
+
+test('User delete', async () => {
+    const deleted = await User.delete({id: user.id});
+    expect(!!deleted).toBe(true);
 });
