@@ -18,6 +18,7 @@
   "homepage": "https://github.com/app-masters/node-lib#readme",
   "dependencies": {
     "@app-masters/mongoose-it": "^1.0.6",
+    "aws-sdk": "2.203.0",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",
@@ -38,11 +39,12 @@
     "passport-jwt": "^2.2.1",
     "passport-local": "^1.0.0",
     "passport-twitter": "^1.0.4",
+    "pg": "^7.4.1",
     "rdstation-node-client": "^1.2.0",
     "rollbar": "^2.0.4",
     "semver": "^5.3.0",
-    "string-template": "^1.0.0",
-    "aws-sdk": "2.203.0"
+    "sequelize": "^4.37.2",
+    "string-template": "^1.0.0"
   },
   "devDependencies": {
     "i": "^0.3.6",
