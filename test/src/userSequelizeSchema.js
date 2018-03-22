@@ -1,5 +1,5 @@
 const {INTEGER, STRING, REAL, BOOLEAN, DATE} = require('sequelize');
-const sequelize = require('./bootstrap');
+
 
 const schema = {
     id: {type: INTEGER, primaryKey: true, autoIncrement: true},
@@ -13,7 +13,4 @@ const schema = {
     updatedAt: {type: DATE, field: 'updated_at'}
 };
 
-const model = sequelize.define('user', schema);
-model.sync({force: false}); // force: true - drop the table if already exists
-
-module.exports = model;
+module.exports = schema;

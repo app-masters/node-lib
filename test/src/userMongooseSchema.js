@@ -1,5 +1,4 @@
 const restful = require('node-restful');
-
 const mongoose = restful.mongoose;
 const ObjectId = mongoose.Schema.Types.ObjectId;
 const AMAuth = require('../../lib/am-auth');
@@ -33,13 +32,16 @@ const schema = {
         name: String
     },
     role: {
-        type: String,
-        enum: ['user', 'editor', 'admin'],
-        default: 'user'
+        type: ObjectId,
+        ref: 'role'
     },
     data: {
         gender: String
     },
+    age: Number,
+    height: Number,
+    active: {type: Boolean, default: false},
+    gender: String,
     notification: {
         android: {
             token: [String],
@@ -78,14 +80,14 @@ const options = {
     toJSON: {virtuals: true},
     new: true
 };
-//
-// let mongooseSchema = mongoose.Schema(schema, options);
-//
-// // Setup user security
-// mongooseSchema.plugin(mongooseIt, 'user');
-//
-// mongooseSchema = AMAuth.setupUserSchema(mongooseSchema);
-//
-// mongoose.model('user', mongooseSchema);
-//
-// module.exports = mongooseSchema;
+
+let mongooseSchema = mongoose.Schema(schema, options);
+
+// Setup user security
+mongooseSchema.plugin(mongooseIt, 'user');
+
+mongooseSchema = AMAuth.setupUserSchema(mongooseSchema);
+
+mongoose.model('user', mongooseSchema);
+
+module.exports = mongooseSchema;

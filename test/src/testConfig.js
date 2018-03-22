@@ -59,11 +59,11 @@ envs.development = {
         denyAccess,
         singleLoginSignup: true
     },
-    mail,
-    invite,
+    // mail,
+    // invite,
     port,
     // message,
-    notification
+    // notification
 };
 
 envs.test = envs.development;
