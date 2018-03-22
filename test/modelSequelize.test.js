@@ -3,6 +3,8 @@ const ModelSequelize = require('../lib/modelSequelize');
 const UserSchema = require('./src/userSequelizeSchema');
 const RoleSchema = require('./src/roleSequelizeSchema');
 
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 50000;
+
 class Role extends ModelSequelize {}
 
 class RoleInstance {
@@ -13,13 +15,13 @@ class RoleInstance {
 
 class User extends ModelSequelize {
     static getActives () {
-        return this.find({active: true}, 'role', 'name');
+        return this.find({'data.active': true}, 'role', 'name');
     }
 }
 
 class UserInstance {
     static activate () {
-        this.active = true;
+        this.data.active = true;
     };
 
     static getName () {
@@ -34,14 +36,24 @@ test('[Sequelize] Model setup', () => {
 });
 
 let user = null;
+let role = null;
 
 test('[Sequelize] User create', async () => {
+    role = await Role.create({title: 'user'});
     const userObj = {
         name: ['José', 'João', 'Maria', 'Carolina', 'Ana', 'Karen', 'Paulo', 'Breno'][Math.floor(Math.random() * 6)],
-        age: Math.floor(Math.random() * 7) + 20,
-        height: Number((Math.floor(Math.random() * 35) / 100).toFixed(2)) + 1.55,
-        active: false,
-        gender: ['male', 'female'][Math.floor(Math.random() * 2)]
+        local: {
+            email: 'usuario@email.com',
+            password: (Math.random() * 100000).toFixed(0)
+        },
+        data: {
+            age: Math.floor(Math.random() * 7) + 20,
+            height: Number((Math.floor(Math.random() * 35) / 100).toFixed(2)) + 1.55,
+            active: false,
+            gender: ['male', 'female'][Math.floor(Math.random() * 2)]
+        },
+        roleId: role.id
+
     };
     user = await User.create(userObj);
     expect(typeof user).toBe('object');
@@ -73,18 +85,20 @@ test('[Sequelize] User class method / find', async () => {
 });
 
 test('[Sequelize] User instance method', async () => {
-    expect(user.active).toBe(false);
+    expect(user.data.active).toBe(false);
     user.activate();
-    expect(user.active).toBe(true);
+    expect(user.data.active).toBe(true);
     expect(user.getName()).toBe(user.name);
 });
 
 test('[Sequelize] User update', async () => {
-    const updated = await User.update({id: user.id}, {active: true});
+    let newData = user.data;
+    newData.active = true;
+    const updated = await User.update({id: user.id}, {data: newData});
     expect(updated).toBe(true);
 });
 
-test('[Sequelize] User delete', async () => {
-    const deleted = await User.delete({id: user.id});
-    expect(!!deleted).toBe(true);
-});
+// test('[Sequelize] User delete', async () => {
+//     const deleted = await User.delete({id: user.id});
+//     expect(!!deleted).toBe(true);
+// });
