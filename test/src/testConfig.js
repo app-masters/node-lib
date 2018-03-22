@@ -10,6 +10,11 @@ let denyAccess = {
     mobile: []
 };
 
+const databaseMongoose = {
+    driver: "mongoose",
+    url: "mongodb://127.0.0.1/node-lib_test_db"
+};
+
 let port = 3456;
 
 const message = {
@@ -49,9 +54,7 @@ const invite = {
 };
 
 envs.development = {
-    database: {
-        url: "mongodb://127.0.0.1/node-lib_test_db"
-    },
+    database: databaseMongoose,
     rollbar: rollbar,
     security: {
         disabledOnDev: false,
@@ -70,6 +73,7 @@ envs.test = envs.development;
 
 envs.production = {
     database: {
+        driver: "mongoose",
         url: null
     },
     rollbar: rollbar,
