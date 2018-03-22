@@ -80,9 +80,8 @@ test('[Sequelize] User instance method', async () => {
 });
 
 test('[Sequelize] User update', async () => {
-    user = await User.update({id: user.id}, {active: true});
-    user = user[0];
-    expect(user.active).toBe(true);
+    const updated = await User.update({id: user.id}, {active: true});
+    expect(updated).toBe(true);
 });
 
 test('[Sequelize] User delete', async () => {

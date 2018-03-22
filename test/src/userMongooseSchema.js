@@ -83,11 +83,4 @@ const options = {
 
 let mongooseSchema = mongoose.Schema(schema, options);
 
-// Setup user security
-mongooseSchema.plugin(mongooseIt, 'user');
-
-mongooseSchema = AMAuth.setupUserSchema(mongooseSchema);
-
-mongoose.model('user', mongooseSchema);
-
 module.exports = mongooseSchema;

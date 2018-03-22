@@ -13,4 +13,5 @@ const schema = {
     updatedAt: {type: DATE, field: 'updated_at'}
 };
 
+
 module.exports = schema;
