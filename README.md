@@ -1,10 +1,23 @@
-# node-lib
+# node-lib 
 
-# apiBootstrap
-
-A short start to App Masters APIs:
+## Config
 
 ```
+{
+    security:{
+        singleLoginSignup:true // will enable login and signup at same route: /login/
+    }
+}
+```
+
+## apiBootstrap
+
+A short start to App Masters APIs.
+
+### Import
+
+#### For Mongoose Models
+```javascript
 // Requires for bootstrap
 const express = require('express');
 const app = express();
@@ -15,9 +28,6 @@ const passport = require('passport');
 //For Mongoose Models
 const apiBootstrap = require('./apiBoostrap');
 
-//For Sequelize Models
-const apiBootstrap = require('./apiBoostrapS');
-
 // 1 - Api Bootstrap tests
 apiBootstrap.setup(app, envs, packag, passport);
 // 2 - Include Routes
@@ -26,9 +36,29 @@ require('./app/routes')(app);
 apiBootstrap.listen(app);
 ```
 
+#### For Sequelize Models
+```javascript
+// Requires for bootstrap
+const envs = require('./config');
+const packag = require('./package.json');
+const app = require('./lib/express')(envs[process.env.NODE_ENV || 'development']);
+
+const apiBootstrap = require('./lib').apiBootstrapS;
+
+// 1 - Api Bootstrap tests
+apiBootstrap.setup(app, envs, packag);
+
+// 2 - Include Routes
+const newApp = require('./routes')(app, envs[process.env.NODE_ENV]);
+
+// 3 - Listen API
+apiBootstrap.listen(Object.assign(app,newApp));
+```
+
 ### Creating Routes
 
 #### Node Restful (Mongoose)
+
 ```javascript  
 
 const nodeRestful = require('@app-masters/node-lib').nodeRestful;
@@ -55,7 +85,7 @@ module.exports = (app) => {
 
 #### Finale Rest (Sequelize)
 
-1. Export the resources with schema and [middlewares for each resource](https://github.com/tommybananas/finale#customize-behavior)
+1 - Export the resources with schema and [middlewares for each resource](https://github.com/tommybananas/finale#customize-behavior)
 ```javascript
 const {exampleSchema} = require('./schemas');
 const {exampleMiddleware} = require('./middlewares');
@@ -70,7 +100,7 @@ module.exports = {
 };
 ```
 
-2. Export the sequelize connection
+2 - Export the sequelize connection
 ```javascript
 const Sequelize = require('sequelize');
 const {url} = require('../configs');
@@ -78,7 +108,7 @@ const {url} = require('../configs');
 module.exports = new Sequelize(url, {/*sequelize options*/});
 ```
 
-3. Setup [finale-rest initialize configs](https://github.com/tommybananas/finale#initialize)
+3 - Setup [finale-rest initialize configs](https://github.com/tommybananas/finale#initialize)
 
 ```javascript
 //routes.js
@@ -91,17 +121,7 @@ module.exports = (app) => {
 }
 ```
 
-### Config
-
-```
-{
-    security:{
-        singleLoginSignup:true // will enable login and signup at same route: /login/
-    }
-}
-```
-
-# nodeRestful
+## nodeRestful
 
 Easy [node-restful](https://github.com/baugarten/node-restful) use with less code and more resources.
 
@@ -147,9 +167,9 @@ let route = {
 nodeRestful.registerRoute(app, router, routeParams);
 ```
 
-# amMailing
+## amMailing
 
-# amInvite
+## amInvite
 
 Add invite key on api config file:
 
@@ -180,7 +200,7 @@ AMInvite.setAcceptCallback((invite=>{
     http://eisaquestao.ufjf.br/amigo/0197039120321730918
 ````
 
-# Message
+## Message
     Allow to manage the message sending.
 #### Configuration
     - On the config.js file, set the message config (this file will be used as a parameter in the message.setup(config) method).
@@ -202,7 +222,7 @@ const message = {
 router.post('/message/:messageKey', Message.sendMessage);
 ```
 
-# Notification (api)
+## Notification (api)
 
 #### Firebase initialize and lib setup
 - The notification config object must look exactly like this
@@ -241,14 +261,14 @@ if(config.notification){
 ##### setup
 - Receives the config object and sets its credentials on the firebase-admin instance
 
-# Stats
+## Stats
 
-# Development
+## Development
 
 ```
 npm install
 ```
 
-# Change Log
+## Change Log
 
 Check all changes on [changelog](CHANGELOG.md).
