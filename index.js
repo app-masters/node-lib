@@ -15,6 +15,7 @@ module.exports = {
     dateTime: require('./lib/dateTime'),
     util: require('./lib/util'),
     apiBootstrap: require('./lib/apiBootstrap'),
+    apiBootstrapS: require('./lib/apiBootstrapS'),
     nodeRestful: require('./lib/nodeRestful'),
     stats: require('./lib/stats'),
     message: require('./lib/message'),

@@ -11,9 +11,12 @@ const app = express();
 const envs = require('./config/config');
 const packag = require('./package');
 const passport = require('passport');
-const userSchema = require('./app/model/userSchema');
 
+//For Mongoose Models
 const apiBootstrap = require('./apiBoostrap');
+
+//For Sequelize Models
+const apiBootstrap = require('./apiBoostrapS');
 
 // 1 - Api Bootstrap tests
 apiBootstrap.setup(app, envs, packag, passport);
@@ -21,6 +24,71 @@ apiBootstrap.setup(app, envs, packag, passport);
 require('./app/routes')(app);
 // 3 - Listen API
 apiBootstrap.listen(app);
+```
+
+### Creating Routes
+
+#### Node Restful (Mongoose)
+```javascript  
+
+const nodeRestful = require('@app-masters/node-lib').nodeRestful;
+
+//This is a mongoose schema
+const exampleSchema = require('./app/model/exampleSchema');
+
+module.exports = (app) => {
+    app.use('/baseEndpoint', router);
+    
+    nodeRestful.registerMultipleRoutes(app, router,
+            [
+                {
+                    route: '/api/example',
+                    modelName: 'example',
+                    schema: exampleSchema,
+                    beforeAll: [...],
+                    afterAll: [...]
+                },
+                //... other routes
+            ]
+}
+```
+
+#### Finale Rest (Sequelize)
+
+1. Export the resources with schema and [middlewares for each resource](https://github.com/tommybananas/finale#customize-behavior)
+```javascript
+const {exampleSchema} = require('./schemas');
+const {exampleMiddleware} = require('./middlewares');
+
+module.exports = {
+    Example: {
+        schema: exampleSchema,
+        restMiddleware: exampleMiddleware,
+        actions: ['create', 'list', 'read', 'update', 'delete'],
+        excludeAttributes: ['password']
+    }
+};
+```
+
+2. Export the sequelize connection
+```javascript
+const Sequelize = require('sequelize');
+const {url} = require('../configs');
+
+module.exports = new Sequelize(url, {/*sequelize options*/});
+```
+
+3. Setup [finale-rest initialize configs](https://github.com/tommybananas/finale#initialize)
+
+```javascript
+//routes.js
+const finaleRestful = require('@app-masters/node-lib').finaleRestful;
+const schemas = require(resources);
+const sequelize = require('app/connections/sequelize')
+
+module.exports = (app) => {
+    return finaleRestful.registerMultipleRoutes(app, schemas, sequelize, configs)
+}
 ```
 
 ### Config
