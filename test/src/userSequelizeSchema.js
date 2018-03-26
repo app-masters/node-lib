@@ -16,8 +16,7 @@ const schema = {
         age: {type: INTEGER}
     }),
     createdAt: {type: DATE, field: 'created_at'},
-    updatedAt: {type: DATE, field: 'updated_at'},
-    _id: {type: INTEGER, field: 'id'}
+    updatedAt: {type: DATE, field: 'updated_at'}
 };
 
 module.exports = schema;
