@@ -18,5 +18,6 @@ module.exports = {
     nodeRestful: require('./lib/nodeRestful'),
     stats: require('./lib/stats'),
     message: require('./lib/message'),
-    notification: require('./lib/notification')
+    notification: require('./lib/notification'),
+    auth: require('./auth')
 };
