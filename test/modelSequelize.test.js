@@ -43,7 +43,7 @@ test('[Sequelize] User create', async () => {
     const userObj = {
         name: ['José', 'João', 'Maria', 'Carolina', 'Ana', 'Karen', 'Paulo', 'Breno'][Math.floor(Math.random() * 6)],
         local: {
-            email: 'usuario@email.com',
+            email: 'user' + new Date().getTime() + '@email.com',
             password: (Math.random() * 100000).toFixed(0)
         },
         data: {
@@ -67,6 +67,16 @@ test('[Sequelize] User findByID', async () => {
 test('[Sequelize] User findOne', async () => {
     user = await User.findOne({id: user.id});
     expect(typeof user).toBe('object');
+});
+
+test('[Sequelize] User findOne JSON', async () => {
+    const anotherUser = await User.findOne({'local.email': user.local.email});
+    expect(anotherUser.id).toBe(user.id);
+});
+
+test('[Sequelize] User findOne fail', async () => {
+    const notUser = await User.findOne({'local.email': user.local.email + 'x'});
+    expect(notUser).toBe(null);
 });
 
 test('[Sequelize] User findByID populated', async () => {
