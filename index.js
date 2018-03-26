@@ -19,5 +19,8 @@ module.exports = {
     stats: require('./lib/stats'),
     message: require('./lib/message'),
     notification: require('./lib/notification'),
-    auth: require('./auth')
+    auth: require('./lib/auth'),
+    modelSequelize: require('./lib/modelSequelize'),
+    modelMongoose: require('./lib/modelMongoose'),
+    jsonSchema: require('./lib/sequelizeJSON')
 };
