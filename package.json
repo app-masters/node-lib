@@ -4,7 +4,8 @@
   "description": "It's very useful, but just for us at App Masters. To you it must be a code mess and useless.",
   "main": "./index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "flow": "flow flow-tests/ || exit 1"
   },
   "repository": {
     "type": "git",
@@ -48,6 +49,7 @@
     "string-template": "^1.0.0"
   },
   "devDependencies": {
+    "flow-bin": "^0.68.0",
     "i": "^0.3.6",
     "jest-mock-express": "^0.1.1",
     "mock-req": "^0.2.0",
