@@ -22,5 +22,8 @@ module.exports = {
     auth: require('./lib/auth'),
     modelSequelize: require('./lib/modelSequelize'),
     modelMongoose: require('./lib/modelMongoose'),
-    jsonSchema: require('./lib/sequelizeJSON')
+    jsonSchema: require('./lib/sequelizeJSON'),
+    apiBootstrapS: require('./apiBootstrapS'),
+    express: require('./express'),
+    finaleRestful: require('./finaleRestful')
 };
