@@ -23,7 +23,7 @@ module.exports = {
     modelSequelize: require('./lib/modelSequelize'),
     modelMongoose: require('./lib/modelMongoose'),
     jsonSchema: require('./lib/sequelizeJSON'),
-    apiBootstrapS: require('./apiBootstrapS'),
-    express: require('./express'),
-    finaleRestful: require('./finaleRestful')
+    apiBootstrapS: require('./lib/apiBootstrapS'),
+    express: require('./lib/express'),
+    finaleRestful: require('./lib/finaleRestful')
 };
