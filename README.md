@@ -181,6 +181,26 @@ if(config.notification){
 npm install
 ```
 
+# Model
+
+## ModelSequelize
+
+### Setup
+```javascript
+const ModelSequelize = require('@app-masters/node-lib').modelSequelize;
+const sequelize = require('../resources/sequelize'); //sequelize connection
+const otherModel = require('./path/to/otherModel');
+
+const MyModel extends ModelSequelize {}
+
+const schema = {/*sequelize schema with foreign key to 'other'*/};
+
+const modelOptions = [{model: otherModel, options: {foreignKey: 'otherId'}}]);
+MyModel.setup(sequelize, modelName, schema, itemInstance, relationArray, modelOptions);
+
+module.exports = MyModel.model;
+```
+
 # Change Log
 
 Check all changes on [changelog](CHANGELOG.md).
