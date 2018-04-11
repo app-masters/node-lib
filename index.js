@@ -18,5 +18,12 @@ module.exports = {
     nodeRestful: require('./lib/nodeRestful'),
     stats: require('./lib/stats'),
     message: require('./lib/message'),
-    notification: require('./lib/notification')
+    notification: require('./lib/notification'),
+    auth: require('./lib/auth'),
+    modelSequelize: require('./lib/modelSequelize'),
+    modelMongoose: require('./lib/modelMongoose'),
+    jsonSchema: require('./lib/sequelizeJSON'),
+    apiBootstrapS: require('./lib/apiBootstrapS'),
+    express: require('./lib/express'),
+    finaleRestful: require('./lib/finaleRestful')
 };

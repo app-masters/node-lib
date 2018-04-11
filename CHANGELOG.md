@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.0] - 2018-04-11
+### Added
+- [New major] modelSequelize is now available
+
 ## [1.1.77] - 2018-03-16
 ### Fixed
 - AMMailing now saves the correct config
