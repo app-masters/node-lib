@@ -2,7 +2,7 @@ const {INTEGER, STRING, REAL, BOOLEAN, DATE} = require('sequelize');
 const JSONSchema =  require ('../../lib/sequelizeJSON');
 
 const schema = {
-    id: {type: INTEGER, primaryKey: true, autoIncrement: true},
+    _id: {type: INTEGER, primaryKey: true, autoIncrement: true},
     local: JSONSchema({
        email: STRING,
        password: STRING
