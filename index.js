@@ -25,5 +25,7 @@ module.exports = {
     jsonSchema: require('./lib/sequelizeJSON'),
     apiBootstrapS: require('./lib/apiBootstrapS'),
     express: require('./lib/express'),
-    finaleRestful: require('./lib/finaleRestful')
+    finaleRestful: require('./lib/finaleRestful'),
+    repository: require('./lib/repository'),
+    instance: require('./lib/instance')
 };
