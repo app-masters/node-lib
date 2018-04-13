@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.01] - 2018-04-13
+### Added
+- updateOne method added to modelSequelize
+
 ## [2.0.0] - 2018-04-11
 ### Added
 - [New major] modelSequelize is now available
