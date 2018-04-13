@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [2.0.2] - 2018-04-13
+## [2.0.4] - 2018-04-13
 ### Added
 - updateOne method added to modelSequelize
 
