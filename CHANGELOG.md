@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.6] - 2018-04-16
+### Fixed
+- ModelSequelize.save() only updates one register
 
 ## [2.0.2/2.0.5] - 2018-04-13
 ### Added
