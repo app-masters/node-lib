@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [2.0.7] - 2018-04-18
 ### Fixed
 - Old apiBootstrap to work just with mongoose, and force to set database drive on config
-- Remover very old am-boostrap
+- Removed very old am-boostrap
 
 ## [2.0.6] - 2018-04-16
 ### Fixed
