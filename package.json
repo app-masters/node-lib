@@ -1,6 +1,6 @@
 {
   "name": "@app-masters/node-lib",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "description": "It's very useful, but just for us at App Masters. To you it must be a code mess and useless.",
   "main": "./index.js",
   "scripts": {
