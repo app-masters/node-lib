@@ -1,0 +1,12 @@
+[ignore]
+.*/bower.json
+.*/broken.json
+[include]
+
+[libs]
+
+[lints]
+all=warn
+[options]
+
+[strict]

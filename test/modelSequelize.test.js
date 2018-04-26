@@ -1,6 +1,6 @@
 /* global test, expect, jest, jasmine, */
-const Repository = require('../lib/repository');
-const Instance = require('../lib/instance');
+const Repository = require('../lib/sequelize/repository');
+const Instance = require('../lib/sequelize/instance');
 const UserSchema = require('./src/userSequelizeSchema');
 const RoleSchema = require('./src/roleSequelizeSchema');
 

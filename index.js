@@ -19,13 +19,13 @@ module.exports = {
     stats: require('./lib/stats'),
     message: require('./lib/message'),
     notification: require('./lib/notification'),
-    auth: require('./lib/auth'),
-    modelSequelize: require('./lib/modelSequelize'),
+    auth: require('./lib/sequelize/auth'),
+    modelSequelize: require('./lib/sequelize/modelSequelize'),
     modelMongoose: require('./lib/modelMongoose'),
-    jsonSchema: require('./lib/sequelizeJSON'),
-    apiBootstrapS: require('./lib/apiBootstrapS'),
+    jsonSchema: require('./lib/sequelize/sequelizeJSON'),
+    apiBootstrapS: require('./lib/sequelize/apiBootstrapS'),
     express: require('./lib/express'),
-    finaleRestful: require('./lib/finaleRestful'),
-    repository: require('./lib/repository'),
-    instance: require('./lib/instance')
+    finaleRestful: require('./lib/sequelize/finaleRestful'),
+    repository: require('./lib/sequelize/repository'),
+    instance: require('./lib/sequelize/instance')
 };

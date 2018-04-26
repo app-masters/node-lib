@@ -1,5 +1,5 @@
 const {INTEGER, STRING, REAL, BOOLEAN, DATE} = require('sequelize');
-const JSONSchema =  require ('../../lib/sequelizeJSON');
+const JSONSchema =  require ('../../lib/sequelize/sequelizeJSON');
 
 const schema = {
     _id: {type: INTEGER, primaryKey: true, autoIncrement: true},

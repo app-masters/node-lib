@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.11] - 2018-04-26
+### Changed
+- Moved sequelize classes to "sequelize" folder on lib (WIP)
+- Removed  sequelize first parans in modem and instance setup (breaking change)
+
 ## [2.0.7/2.0.10] - 2018-04-20
 ### Fixed
 - Old apiBootstrap to work just with mongoose, and force to set database drive on config

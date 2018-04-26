@@ -2,9 +2,9 @@
 
 const passport = require('passport');
 const mockRes = require('jest-mock-express').response;
-const ModelSequelize = require('../lib/modelSequelize');
+const ModelSequelize = require('../lib/sequelize/modelSequelize');
 const UserSchema = require('./src/userSequelizeSchema');
-const Auth = require('../lib/auth');
+const Auth = require('../lib/sequelize/auth');
 
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 100000;
 
