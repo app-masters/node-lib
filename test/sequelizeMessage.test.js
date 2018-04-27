@@ -52,8 +52,8 @@ const schema = {
     _id: {type: INTEGER, primaryKey: true, autoIncrement: true},
     fromUserId: {
         type: INTEGER,
-        field: 'from_user_id'
-    ,
+        field: 'from_user_id',
+    },
     messageKey: {
         type: STRING(64),
         field: 'message_key'
@@ -69,7 +69,7 @@ const schema = {
     subject: STRING(128),
     toMail: {
         type: STRING(128),
-        field: 'to_mail'
+        field: 'to_maill'
     },
     object: JSON,
     dateSent: {
@@ -156,8 +156,8 @@ class Message extends Instance {
         console.log("Will send that message");
 
         // Sent
-        const r = await AMMailing.sendEmail(this.toMail,this.subject,this.bodyText, this.bodyHtml);
-        console.log("r",r);
+        const r = await AMMailing.sendEmail(this.toMail, this.subject, this.bodyText, this.bodyHtml);
+        console.log("r", r);
 
         this.dateSent = new Date();
         await this.save();
@@ -187,14 +187,19 @@ test('Create and save a message', async () => {
     message.setFromUserId(33);
     message.setTo('tiago@tiagogouvea.com.br');
     message.setSubject('Email test');
-    await message.save();
+    try {
+        await message.save();
+    } catch (e) {
+        global.rollbar.log(e);
+        console.error(">>>>>>", e);
+    }
     expect(message._id).not.toBeNull();
 });
 
 
 test('Setup AMAiling', () => {
     const config = require('./src/testConfig');
-    config.development.mail.auth.pass+='c';
+    config.development.mail.auth.pass += 'c';
     const result = AMMailing.setup(config.development);
     expect(result).toBe(true);
 });

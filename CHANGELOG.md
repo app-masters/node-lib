@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [2.0.11] - 2018-04-26
+## [2.0.11/2.0.12] - 2018-04-26
 ### Fixed
 - Fix authentication with sequelize
 ### Changed
