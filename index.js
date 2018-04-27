@@ -27,5 +27,6 @@ module.exports = {
     express: require('./lib/express'),
     finaleRestful: require('./lib/sequelize/finaleRestful'),
     repository: require('./lib/sequelize/repository'),
-    instance: require('./lib/sequelize/instance')
+    instance: require('./lib/sequelize/instance'),
+    sequelizeInstance: require('./lib/sequelize/sequelizeInstance')
 };
