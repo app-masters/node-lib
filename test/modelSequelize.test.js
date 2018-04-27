@@ -9,7 +9,7 @@ const Sequelize = require('sequelize');
 let sequelize = null;
 
 test('Sequelize configuration', () => {
-    const host = 'ec2-54-204-45-43.compute-1.amazonaws.com';
+    const host = '';
     const database = 'dbi1ijv2pstot1';
     const user = 'wdwyogzyooqycm';
     const port = 5432;

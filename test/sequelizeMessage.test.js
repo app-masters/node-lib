@@ -53,7 +53,7 @@ const schema = {
     fromUserId: {
         type: INTEGER,
         field: 'from_user_id'
-    ,
+    },
     messageKey: {
         type: STRING(64),
         field: 'message_key'
