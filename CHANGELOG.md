@@ -6,12 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [2.0.11/2.0.12] - 2018-04-26
+## [2.0.11/2.0.13] - 2018-04-26
 ### Fixed
 - Fix authentication with sequelize
 ### Changed
 - Moved sequelize classes to "sequelize" folder on lib (WIP)
-- Removed  sequelize first parans in modem and instance setup (breaking change)
+- Removed sequelize first parans in modem and instance setup (breaking change)
+- Added flow to dependence on package
 
 ## [2.0.7/2.0.10] - 2018-04-20
 ### Fixed

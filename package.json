@@ -1,6 +1,6 @@
 {
   "name": "@app-masters/node-lib",
-  "version": "2.0.12",
+  "version": "2.0.13",
   "description": "It's very useful, but just for us at App Masters. To you it must be a code mess and useless.",
   "main": "./index.js",
   "scripts": {
@@ -48,13 +48,13 @@
     "rollbar": "^2.0.4",
     "semver": "^5.3.0",
     "sequelize": "^4.37.2",
-    "string-template": "^1.0.0"
-  },
-  "devDependencies": {
+    "string-template": "^1.0.0",
     "babel-jest": "^22.4.3",
     "babel-preset-flow": "^6.23.0",
     "flow-bin": "^0.70.0",
-    "flow-typed": "^2.4.0",
+    "flow-typed": "^2.4.0"
+  },
+  "devDependencies": {
     "i": "^0.3.6",
     "jest-mock-express": "^0.1.1",
     "mock-req": "^0.2.0",
