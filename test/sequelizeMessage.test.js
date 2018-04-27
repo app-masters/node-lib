@@ -111,7 +111,7 @@ class Message extends Instance {
     toMail: string;
     subject: string;
 
-    constructor(obj: ?MessageObj): this {
+    constructor(obj: ?MessageObj): Message {
         super(obj, Messages);
     }
 

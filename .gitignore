@@ -16,3 +16,5 @@ pids
 # Lockers
 package-lock.json
 yarn-lock.json
+
+.env
