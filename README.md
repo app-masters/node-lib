@@ -201,6 +201,11 @@ MyModel.setup(sequelize, modelName, schema, itemInstance, relationArray, modelOp
 module.exports = MyModel.model;
 ```
 
+# Tests
+
+- **Message** ```npm run test test/sequelizeMessage.test.js```
+
 # Change Log
 
 Check all changes on [changelog](CHANGELOG.md).
+

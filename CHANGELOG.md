@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [2.0.14/2.0.28] - 2018-04-27
+## [2.0.30] - 2018-04-30
+### Changed
+- Schema check on save and update
+
+## [2.0.14/2.0.29] - 2018-04-27
 ### Added
 - postinstall on package to generate build folder
 - modelOptions.freezeTableName default to true on all repository

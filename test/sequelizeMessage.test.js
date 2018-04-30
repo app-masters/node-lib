@@ -11,10 +11,10 @@ let sequelize = null;
 
 test('Sequelize configuration', () => {
     const host = 'ec2-54-204-45-43.compute-1.amazonaws.com';
-    const database = 'dbi1ijv2pstot1';
-    const user = 'wdwyogzyooqycm';
+    const database = ';;;;dbi1ijv2pstot1';
+    const user = ';;;;wdwyogzyooqycm';
     const port = 5432;
-    const password = 'ce5878abe136f63d6c7114b926d4654d5d8e2ce515b45cfa271e2c1a4b8cf784';
+    const password = ';;;;ce5878abe136f63d6c7114b926d4654d5d8e2ce515b45cfa271e2c1a4b8cf784';
     const url = `postgres://${user}:${password}@${host}:${port}/${database}`;
 
     const options = {
@@ -27,6 +27,7 @@ test('Sequelize configuration', () => {
     expect(typeof sequelize).toBe('object');
     const instance = SequelizeInstance.getInstance();
     expect(instance).toBe(sequelize);
+    expect(instance.isConnected()).toBe(sequelize);
 });
 
 
@@ -143,6 +144,7 @@ class Message extends Instance {
 
     setObject(object: Object): void {
         this.object = object;
+        this.notExists = true;
     }
 
     async send(): Promise<boolean> {
@@ -152,12 +154,9 @@ class Message extends Instance {
             throw new Error("Message must have toMail, subject, bodyHtml and bodyText, to be sent");
         }
 
-        // Check SMTP
-        console.log("Will send that message");
-
         // Sent
         const r = await AMMailing.sendEmail(this.toMail, this.subject, this.bodyText, this.bodyHtml);
-        console.log("r", r);
+        // console.log("r", r);
 
         this.dateSent = new Date();
         await this.save();
@@ -193,6 +192,7 @@ test('Create and save a message', async () => {
         global.rollbar.log(e);
         console.error(">>>>>>", e);
     }
+    console.log(message._id);
     expect(message._id).not.toBeNull();
 });
 
