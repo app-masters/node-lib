@@ -87,7 +87,7 @@ class Message extends Instance {
     toMail: string;
     subject: string;
 
-    constructor(obj: ?MessageObj): this {
+    constructor(obj: ?MessageObj): Message {
         super(obj, Messages);
     }
 
@@ -160,7 +160,7 @@ describe('Sequelize setup and connection', () => {
         console.log("AA");
         const host = 'ec2-54-204-45-43.compute-1.amazonaws.com';
         const database = 'dbi1ijv2pstot1';
-        const user = ';;;wdwyogzyooqycm';
+        const user = 'wdwyogzyooqycm';
         const port = 5432;
         const password = 'ce5878abe136f63d6c7114b926d4654d5d8e2ce515b45cfa271e2c1a4b8cf784';
         const url = `postgres://${user}:${password}@${host}:${port}/${database}`;
@@ -168,7 +168,10 @@ describe('Sequelize setup and connection', () => {
         const options = {
             forceSync: false, // Force database to be recreated
             logging: false, // Show SQL queries on terminal
-            syncLogging: false // Show SQL queries used to sync
+            syncLogging: false, // Show SQL queries used to sync
+            dialectOptions: {
+                ssl: true
+            }
         };
 
         sequelize = await SequelizeInstance.setup(url, options);
@@ -177,8 +180,6 @@ describe('Sequelize setup and connection', () => {
             const instance = SequelizeInstance.getInstance();
             expect(instance).toBe(sequelize);
         }
-
-        console.log("AAA");
 
         done(expect(SequelizeInstance.isConnected()).toBe(true));
     });

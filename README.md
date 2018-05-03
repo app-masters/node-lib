@@ -196,7 +196,7 @@ const MyModel extends ModelSequelize {}
 const schema = {/*sequelize schema with foreign key to 'other'*/};
 
 const modelOptions = [{model: otherModel, options: {foreignKey: 'otherId'}}]);
-MyModel.setup(sequelize, modelName, schema, itemInstance, relationArray, modelOptions);
+MyModel.setup( modelName, schema, itemInstance, relationArray, modelOptions);
 
 module.exports = MyModel.model;
 ```

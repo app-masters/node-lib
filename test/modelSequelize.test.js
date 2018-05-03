@@ -68,7 +68,7 @@ class User extends Instance {
 
 test('[Sequelize] Model setup', () => {
     // Roles.setup(sequelize, 'role', RoleSchema, Role);
-    Users.setup(sequelize, 'user', UserSchema, User);
+    Users.setup( 'user', UserSchema, User);
     expect(true).toBe(true);
 });
 
