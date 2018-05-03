@@ -36,22 +36,22 @@ const envs = {
             accessToken: 'bcf47e74943c4efa987c7eadaefc2a54'
         }
     },
-};;
+};
+;
 
 const app = require('../dist/express')(envs['development']);
 
-app.use('/not-protected', (req,res) => {
+app.use('/not-protected', (req, res) => {
     throw new Error('Ugly error message');
 });
 
-app.use('/protected', (req,res) => {
-   req.rollbar_person = {
-       id: 42,
-       email: 'email@example.com',
-       username: 'theuser'
-   }
-
-   throw new Error('Now it\'s personal!')
+app.use('/protected', (req, res) => {
+    req.user = {
+        id: 42,
+        email: 'email@example.com',
+        username: 'theuser'
+    }
+    throw new Error('Now it\'s personal!')
 });
 
 app.listen(8001, () => console.log('TEST API'))

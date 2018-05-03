@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.32] - 2018-05-03
+### Changed
+- Fix person rollbar flow at AM-Error.
+
 ## [2.0.31] - 2018-05-03
 ### Changed
 - Session fixes
