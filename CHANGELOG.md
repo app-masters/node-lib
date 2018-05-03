@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.31] - 2018-05-03
+### Changed
+- Session fixes
+
 ## [2.0.30] - 2018-04-30
 ### Changed
 - Schema check on save and update

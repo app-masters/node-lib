@@ -201,6 +201,19 @@ MyModel.setup(sequelize, modelName, schema, itemInstance, relationArray, modelOp
 module.exports = MyModel.model;
 ```
 
+
+# Session
+
+To use sessions just add a session key on your config.
+
+```
+{
+    session:{
+        someThing:true
+    }
+}
+```
+
 # Tests
 
 - **Message** ```npm run test test/sequelizeMessage.test.js```
