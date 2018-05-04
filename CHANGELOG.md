@@ -6,11 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [2.0.33/2.0.34] - 2018-05-04
+## [2.0.33/2.0.35] - 2018-05-04
 ### Fixed
 - Finale now have a default include of Sequelize
 - SequelizeModel can receive more than just a string
 - SequelizeModel.find need a arrow function on instance creation
+- Removing asCallback from Auth
 
 ## [2.0.32] - 2018-05-03
 ### Changed
