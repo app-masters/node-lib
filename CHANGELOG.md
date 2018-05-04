@@ -6,13 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [2.0.36]
-### Changed
-- Added getUserData public method
 
-## [2.0.36]
+## [2.0.36/2.0.38]
 ### Changed
 - Added optional callback to sequelize/auth
+- Added getUserData public method
+- Removed optional callback to sequelize/auth
 
 ## [2.0.33/2.0.35] - 2018-05-04
 ### Fixed
