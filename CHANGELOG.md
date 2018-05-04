@@ -5,9 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-## [2.0.39/2.0.40]
+## [2.0.39/2.0.41]
 ### Changed
 - Added sign public method
+- Removing name from localSignup
 
 ## [2.0.37]
 ### Changed
