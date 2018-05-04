@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.36]
+### Changed
+- Added optional callback to sequelize/auth
+
 ## [2.0.33/2.0.35] - 2018-05-04
 ### Fixed
 - Finale now have a default include of Sequelize
