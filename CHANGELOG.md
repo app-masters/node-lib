@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-## [2.0.38]
+## [2.0.39]
 ### Changed
 - Added sign public method
 
@@ -13,9 +13,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Added getUserData public method
 
-## [2.0.36]
+## [2.0.36/2.0.38]
 ### Changed
 - Added optional callback to sequelize/auth
+- Added getUserData public method
+- Removed optional callback to sequelize/auth
 
 ## [2.0.33/2.0.35] - 2018-05-04
 ### Fixed
