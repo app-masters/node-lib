@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.43] - 2018-05-17
+### Changed
+- Remodelled sequelizeMessage
+
 ## [2.0.42]
 ### Changed
 - Remodelled sequelizeMessage
