@@ -6,6 +6,42 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.43/2.0.44] - 2018-05-17
+### Changed
+- Getting auth errors on view
+- Send name as status
+
+## [2.0.42]
+### Changed
+- Remodelled sequelizeMessage
+
+
+## [2.0.39/2.0.41]
+### Changed
+- Added sign public method
+- Removing name from localSignup
+
+## [2.0.37]
+### Changed
+- Added getUserData public method
+
+## [2.0.36/2.0.38]
+### Changed
+- Added optional callback to sequelize/auth
+- Added getUserData public method
+- Removed optional callback to sequelize/auth
+
+## [2.0.33/2.0.35] - 2018-05-04
+### Fixed
+- Finale now have a default include of Sequelize
+- SequelizeModel can receive more than just a string
+- SequelizeModel.find need a arrow function on instance creation
+- Removing asCallback from Auth
+
+## [2.0.32] - 2018-05-03
+### Changed
+- Fix person rollbar flow at AM-Error.
+
 ## [2.0.31] - 2018-05-03
 ### Changed
 - Session fixes

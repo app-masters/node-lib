@@ -23,6 +23,15 @@ require('./app/routes')(app);
 apiBootstrap.listen(app);
 ```
 
+### Environment
+
+When using the `apiBootstrapS`, you can use a local development variables.
+Create a .env file in the project root and set the variables.
+Right now, the bootstrap is accepting:
+````
+DATABASE_URL=postgres://...?ssl=true //If not set here, must be specified on config file
+````
+
 ### Config
 
 ```
@@ -196,7 +205,7 @@ const MyModel extends ModelSequelize {}
 const schema = {/*sequelize schema with foreign key to 'other'*/};
 
 const modelOptions = [{model: otherModel, options: {foreignKey: 'otherId'}}]);
-MyModel.setup(sequelize, modelName, schema, itemInstance, relationArray, modelOptions);
+MyModel.setup( modelName, schema, itemInstance, relationArray, modelOptions);
 
 module.exports = MyModel.model;
 ```

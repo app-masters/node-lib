@@ -1,5 +1,4 @@
 /* global test, expect, jest, jasmine, */
-
 const express = require('express');
 const passport = require('passport');
 const packag = require('../package');
