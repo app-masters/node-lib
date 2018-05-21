@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.45] - 2018-05-21
+### Changed
+- disableTouch on session
+
 ## [2.0.43/2.0.44] - 2018-05-17
 ### Changed
 - Getting auth errors on view
