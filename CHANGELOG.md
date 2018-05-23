@@ -6,9 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [2.0.46] - 2018-05-23
+## [2.0.46/2.0.47] - 2018-05-23
 ### Changed
 - Auth facebookLogin refactor for sequelize
+- Rollbar required error only when rollbarToken is not defined
 
 ## [2.0.45] - 2018-05-21
 ### Changed
