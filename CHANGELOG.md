@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.46] - 2018-05-23
+### Changed
+- Auth facebookLogin refactor for sequelize
+
 ## [2.0.45] - 2018-05-21
 ### Changed
 - disableTouch on session
