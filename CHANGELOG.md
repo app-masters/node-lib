@@ -6,9 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [2.0.48] - 2018-05-24
+## [2.0.48/2.0.49] - 2018-05-24
 ### Changed
 - Rollbar only and always required on production
+- Facebook login method separated from the route
 
 ## [2.0.46/2.0.47] - 2018-05-23
 ### Changed
