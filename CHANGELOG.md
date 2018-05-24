@@ -6,6 +6,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.48/2.0.49] - 2018-05-24
+### Changed
+- Rollbar only and always required on production
+- Facebook login method separated from the route
+
+## [2.0.46/2.0.47] - 2018-05-23
+### Changed
+- Auth facebookLogin refactor for sequelize
+- Rollbar required error only when rollbarToken is not defined
+
+## [2.0.45] - 2018-05-21
+### Changed
+- disableTouch on session
+
+## [2.0.43/2.0.44] - 2018-05-17
+### Changed
+- Getting auth errors on view
+- Send name as status
+
 ## [2.0.42]
 ### Changed
 - Remodelled sequelizeMessage
