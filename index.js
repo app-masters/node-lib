@@ -18,6 +18,7 @@ module.exports = {
     nodeRestful: require('./dist/nodeRestful'),
     stats: require('./dist/stats'),
     message: require('./dist/message'),
+    messageSequelize: require('./dist/sequelize/message'),
     notification: require('./dist/notification'),
     auth: require('./dist/sequelize/auth'),
     modelSequelize: require('./dist/sequelize/modelSequelize'),
