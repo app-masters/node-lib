@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [2.0.48/2.0.52] - 2018-05-24
+## [2.0.54] - 2018-05-28
+### Changed
+- rollbar_person is not required for send errors to Rollbar
+
+## [2.0.48/2.0.53] - 2018-05-24
 ### Changed
 - Rollbar only and always required on production
 - Facebook login method separated from the route
