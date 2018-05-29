@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.55] - 2018-05-29
+### Changed
+- adjusted auth to work with password redefining
+
 ## [2.0.54] - 2018-05-28
 ### Changed
 - rollbar_person is not required for send errors to Rollbar
