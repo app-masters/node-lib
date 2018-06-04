@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.56] - 2018-06-04
+### Changed
+- adjusted find to work with limit while querying
+
 ## [2.0.55] - 2018-05-29
 ### Changed
 - adjusted auth to work with password redefining
