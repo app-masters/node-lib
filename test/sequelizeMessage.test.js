@@ -3,6 +3,7 @@
 
 const SequelizeInstance = require('../lib/sequelize/sequelizeInstance');
 const AMMailing = require('../lib/am-mailing');
+const htmls = require('../lib/sequelize/message/htmlEmail');
 
 let Message;// = require('../lib/sequelize/message');
 let Messages; // = require('../lib/sequelize/message/messageRepository');
@@ -144,18 +145,8 @@ describe('Create a message and send', () => {
         try {
             const userId = 1;
             const toMail = 'piubello_bass@hotmail.com';
-            const {background, footer, lowText, upperText, styles, buttonText, buttonUrl} = require('../lib/sequelize/message/htmlEmail');
-            const res = await Message.sendEmail(toMail, background, {
-                subject: 'subject',
-                fields: {
-                        footer,
-                        lowText,
-                        upperText,
-                        styles,
-                        buttonUrl,
-                        buttonText
-                    }
-            }, null, {}, userId);
+            const res = await Message.sendEmailTemplated(htmls, toMail, null, userId);
+
             expect(res.fromUserId).toBe(userId);
             expect(res._id).toBeTruthy();
             expect(res.createdAt).toBeTruthy();
