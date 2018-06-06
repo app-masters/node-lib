@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.57] - 2018-06-06
+### Changed
+- Adjusted mail and tests to work with templated mail
+
 ## [2.0.56] - 2018-06-04
 ### Changed
 - adjusted find to work with limit while querying
