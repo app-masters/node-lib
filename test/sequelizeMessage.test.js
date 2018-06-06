@@ -90,7 +90,6 @@ describe('Create a message and send', () => {
         }*/
         Message.setup({
             label_contact: {
-                toMail: 'piubello_bass@hotmail.com',
                 subject: 'subject',
                 fields: {
                         name: 'nome',
@@ -103,7 +102,8 @@ describe('Create a message and send', () => {
     test('Send Message without forcing config', async () => {
         try {
             const userId = 1;
-            const res = await Message.sendEmail({name: 'hello', email: 'blabla', coisa: 'yes'}, 'label_contact', userId);
+            const res = await Message.sendEmail('piubello_bass@hotmail.com', {name: 'hello', email: 'blabla', coisa: 'yes'}, 'label_contact', null, {}, userId);
+            
             expect(res.fromUserId).toBe(userId);
             expect(res._id).toBeTruthy();
             expect(res.createdAt).toBeTruthy();
@@ -119,14 +119,43 @@ describe('Create a message and send', () => {
     test('Send Message forcing config', async () => {
         try {
             const userId = 1;
-            const res = await Message.sendEmail({name: 'hello', email: 'blabla', coisa: 'yes'}, {
-                toMail: 'piubello_bass@hotmail.com',
+            const toMail = 'piubello_bass@hotmail.com';
+            
+            const res = await Message.sendEmail(toMail, {name: 'hello', email: 'blabla', coisa: 'yes'}, {
                 subject: 'subject',
                 fields: {
                         name: 'name2',
                         email: 'email2'
                     }
-            }, userId);
+            }, null, {}, userId);
+            expect(res.fromUserId).toBe(userId);
+            expect(res._id).toBeTruthy();
+            expect(res.createdAt).toBeTruthy();
+            expect(res.toMail).toBeTruthy();
+            expect(res.dateSent).toBeTruthy();
+        } catch (e) {
+            expect(e).toBeFalsy();
+        } finally {
+
+        }
+    });
+
+    test('Send HTML Templated Message', async () => {
+        try {
+            const userId = 1;
+            const toMail = 'piubello_bass@hotmail.com';
+            const {background, footer, lowText, upperText, styles, buttonText, buttonUrl} = require('../lib/sequelize/message/htmlEmail');
+            const res = await Message.sendEmail(toMail, background, {
+                subject: 'subject',
+                fields: {
+                        footer,
+                        lowText,
+                        upperText,
+                        styles,
+                        buttonUrl,
+                        buttonText
+                    }
+            }, null, {}, userId);
             expect(res.fromUserId).toBe(userId);
             expect(res._id).toBeTruthy();
             expect(res.createdAt).toBeTruthy();
