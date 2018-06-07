@@ -144,8 +144,8 @@ describe('Create a message and send', () => {
     test('Send HTML Templated Message', async () => {
         try {
             const userId = 1;
-            const toMail = 'piubello_bass@hotmail.com';
-            const res = await Message.sendEmailTemplated(htmls, toMail, null, userId);
+            const toMail = 'web-no2yd@mail-tester.com';
+            const res = await Message.sendEmailTemplated(htmls, toMail, 'test mail', null, userId);
 
             expect(res.fromUserId).toBe(userId);
             expect(res._id).toBeTruthy();
