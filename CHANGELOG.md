@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.58] - 2018-06-06
+### Changed
+- More adjustments on templating email to work with config....
+
 ## [2.0.57] - 2018-06-06
 ### Changed
 - Adjusted mail and tests to work with templated mail
