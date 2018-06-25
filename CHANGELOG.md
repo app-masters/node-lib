@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.61] - 2018-06-25
+### Changed
+- Change on delete() in instance
+
 ## [2.0.60] - 2018-06-25
 ### Changed
 - changed wherez to where on modelSequelize.delete()
