@@ -6,9 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [2.0.62] - 2018-06-26
+## [2.0.62/2.0.63] - 2018-06-26
 ### Changed
-- Rollbar debug on am-auth jwt payload
+- Rollbar info on am-auth jwt payload
 
 ## [2.0.61] - 2018-06-25
 ### Changed
