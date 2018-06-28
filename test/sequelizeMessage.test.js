@@ -3,7 +3,6 @@
 
 const SequelizeInstance = require('../lib/sequelize/sequelizeInstance');
 const AMMailing = require('../lib/am-mailing');
-const htmls = require('../lib/sequelize/message/htmlEmail');
 
 let Message;// = require('../lib/sequelize/message');
 let Messages; // = require('../lib/sequelize/message/messageRepository');
@@ -21,8 +20,6 @@ describe('Sequelize setup and connection', () => {
 
 
     it('Sequelize connection', async (done) => {
-        console.log("AA");
-
         // banco dev Felipe
         const host = 'ec2-54-225-96-191.compute-1.amazonaws.com';
         const database = 'd1a9elst8fge1q';
@@ -72,39 +69,31 @@ describe('Sequelize setup and connection', () => {
     });
 });
 
+const mailConfig = {
+    label_contact: {
+        toMail: 'piubello_bass@hotmail.com',
+        subject: 'subject',
+        fields: {
+            name: 'nome',
+            email: 'zararata'
+        }
+    }
+};
 
 describe('Create a message and send', () => {
 
     test('Setup Message', async () => {
-        /*
-        config: {
-            label_contact: {
-                toMail: string,
-                subject: string,
-                fields: [
-                    label_contact: {
-                        name: 'nome',
-                        email: 'zararata'
-                    }
-                ]
-            }
-        }*/
-        Message.setup({
-            label_contact: {
-                subject: 'subject',
-                fields: {
-                        name: 'nome',
-                        email: 'zararata'
-                    }
-            }});
-
+        Message.setup(mailConfig);
         return expect(Message.config).not.toBeNull();
     });
     test('Send Message without forcing config', async () => {
         try {
             const userId = 1;
-            const res = await Message.sendEmail('piubello_bass@hotmail.com', {name: 'hello', email: 'blabla', coisa: 'yes'}, 'label_contact', null, {}, userId);
-            
+            const res = await Message.sendEmail({
+                name: 'hello',
+                email: 'blabla',
+                coisa: 'yes'
+            }, 'label_contact', userId);
             expect(res.fromUserId).toBe(userId);
             expect(res._id).toBeTruthy();
             expect(res.createdAt).toBeTruthy();
@@ -120,15 +109,14 @@ describe('Create a message and send', () => {
     test('Send Message forcing config', async () => {
         try {
             const userId = 1;
-            const toMail = 'piubello_bass@hotmail.com';
-            
-            const res = await Message.sendEmail(toMail, {name: 'hello', email: 'blabla', coisa: 'yes'}, {
+            const res = await Message.sendEmail({name: 'hello', email: 'blabla', coisa: 'yes'}, {
+                toMail: 'piubello_bass@hotmail.com',
                 subject: 'subject',
                 fields: {
-                        name: 'name2',
-                        email: 'email2'
-                    }
-            }, null, {}, userId);
+                    name: 'name2',
+                    email: 'email2'
+                }
+            }, userId);
             expect(res.fromUserId).toBe(userId);
             expect(res._id).toBeTruthy();
             expect(res.createdAt).toBeTruthy();
@@ -141,12 +129,10 @@ describe('Create a message and send', () => {
         }
     });
 
-    test('Send HTML Templated Message', async () => {
+    test('Send Message forcing config with template', async () => {
         try {
             const userId = 1;
-            const toMail = 'web-no2yd@mail-tester.com';
-            const res = await Message.sendEmailTemplated(htmls, toMail, 'test mail', null, userId);
-
+            const res = await Message.sendEmail("tiago@tiagogouvea.com.br","Teste com HTML","Olá amigo!","<p>Olá amigo!</p>");
             expect(res.fromUserId).toBe(userId);
             expect(res._id).toBeTruthy();
             expect(res.createdAt).toBeTruthy();
