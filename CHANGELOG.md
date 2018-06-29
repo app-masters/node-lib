@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [2.0.64/2.0.68] - 2018-06-29
+## [2.0.64/2.0.69] - 2018-06-29
 ### Changed
 - Break changes in MessageSequelize and AmMailing
 
