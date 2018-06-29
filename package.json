@@ -1,6 +1,6 @@
 {
   "name": "@app-masters/node-lib",
-  "version": "2.0.63",
+  "version": "2.0.64",
   "description": "It's very useful, but just for us at App Masters. To you it must be a code mess and useless.",
   "main": "./index.js",
   "scripts": {
@@ -50,6 +50,7 @@
     "mustache": "^2.3.0",
     "node-restful": "^0.2.6",
     "nodemailer": "^4.3.1",
+    "nodemailer-html-to-text": "^3.0.0",
     "passport": "^0.3.2",
     "passport-facebook": "^2.1.1",
     "passport-google-oauth": "^1.0.0",

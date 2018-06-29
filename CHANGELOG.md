@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.64] - 2018-06-29
+### Changed
+- Break changes in MessageSequelize and AmMailing
+
 ## [2.0.62/2.0.63] - 2018-06-26
 ### Changed
 - Rollbar info on am-auth jwt payload
