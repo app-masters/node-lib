@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.74] - 2018-07-02
+### Changed
+- Auth facebook login can receive another social network
+
 ## [2.0.73] - 2018-07-02
 ### Fix
 - Fix email and localEmail on first login object at amAuth
