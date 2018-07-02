@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.73] - 2018-07-02
+### Fix
+- Fix email and localEmail on first login object at amAuth
+
 ## [2.0.64/2.0.72] - 2018-06-29
 ### Changed
 - Break changes in MessageSequelize and AmMailing
