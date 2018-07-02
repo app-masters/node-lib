@@ -6,10 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [2.0.74] - 2018-07-02
-### Fix
+## [2.0.75] - 2018-07-02
+### Changed
 - Code cleaning
 - Now {{forgotten}} markups are removed before sending mail
+
+## [2.0.74] - 2018-07-02
+### Changed
+- Auth facebook login can receive another social network
 
 ## [2.0.73] - 2018-07-02
 ### Fix
