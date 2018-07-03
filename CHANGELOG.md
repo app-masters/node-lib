@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+
+## [2.0.76] - 2018-07-03
+### Added
+- query and queryOne added to modelSequelize to suport raw queries
+
 ## [2.0.75] - 2018-07-02
 ### Changed
 - Code cleaning
