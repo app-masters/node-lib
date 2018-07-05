@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.79] - 2018-07-05
+### Added
+- repository.exists({field:value});
+- req.saveSession()
+
 ## [2.0.78] - 2018-07-05
 ### Fixed
 - Auth socialLogin correctly throws errors
