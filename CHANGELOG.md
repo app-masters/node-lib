@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.81] - 2018-07-05
+### Added
+- databaseObjectToInstance added to model
+
 ## [2.0.80] - 2018-07-05
 ### Added
 - repository.exists({field:value});
