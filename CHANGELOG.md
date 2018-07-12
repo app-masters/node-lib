@@ -6,9 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [2.0.81] - 2018-07-05
+## [2.0.82] - 2018-07-12
 ### Added
 - databaseObjectToInstance added to model
+
+## [2.0.81] - 2018-07-11
+### Added
+- modelSequelize now exposes method "create" correctly
 
 ## [2.0.80] - 2018-07-05
 ### Added
