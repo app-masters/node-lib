@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [2.0.82/2.0.83] - 2018-07-12
+## [2.0.82/2.0.84] - 2018-07-12
 ### Added
 - databaseObjectToInstance added to model
 
