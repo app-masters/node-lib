@@ -146,8 +146,7 @@ describe('Create a message and send', () => {
 
             let message = await MessageSequelize.sendObjectMessage(
                 "label_contact",
-                contentObj,
-                "tiago@tiagogouvea.com.br",
+                "tiago@#.com.br",
                 null,
                 replaceFields,
                 transportConfig

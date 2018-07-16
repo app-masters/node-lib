@@ -40,11 +40,13 @@ const mail = {
     port: 2525,
     auth: {
         user: 'noreply@appmasters.io',
-        pass: 'XO}O3$kBH}B' // + 'c'
+        pass: 'XO}O3$kBH}B'
     },
     tls: {
         rejectUnauthorized: false
-    }
+    },
+    connectionTimeout: 3000,
+    greetingTimeout: 3000,
 };
 
 const invite = {
