@@ -6,10 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [2.0.89] - 2018-07-30
+## [2.0.89/2.0.91] - 2018-07-30
 ### Added
 - Hashed Id available on message replace fields
 - Method for set a message read by it's hashed id
+### Fixed
+- Cast _id as varchar on findByHash
 
 ## [2.0.88] - 2018-07-18
 ### Changed
