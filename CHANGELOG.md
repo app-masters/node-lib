@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.94] - 2018-08-21
+## Fixed
+- Fix unhandledErrorHandler
+
 ## [2.0.89/2.0.93] - 2018-07-30
 ### Added
 - Hashed Id available on message replace fields
