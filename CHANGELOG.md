@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.94/2.0.101] - 2018-08-21
+## Fixed
+- Fix for logging on async callbacks on am-error
+
 ## [2.0.94/2.0.100] - 2018-08-21
 ## Fixed
 - Fix unhandledErrorHandler
