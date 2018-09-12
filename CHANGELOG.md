@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.107] - 2018-09-12
+### Added
+- Another way to find sent message (checkMessageWasSent)
+
 ## [2.0.106] - 2018-09-12
 ## Added
 - Search messages by user and subject
