@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [2.0.105] - 2018-09-12
+## [2.0.106] - 2018-09-12
 ## Added
 - Search messages by user and subject
 
