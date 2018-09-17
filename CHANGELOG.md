@@ -6,11 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [2.1.0] - 2018-09-17
-### Fixed
-- Exporting message schema
-
-## [2.0.109] - 2018-09-17
+## [2.0.109/2.1.1] - 2018-09-17
 ### Fixed
 - Exporting message repository again
 
