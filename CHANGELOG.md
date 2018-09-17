@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.109] - 2018-09-17
+### Fixed
+- Exporting message repository again
+
 ## [2.0.108] - 2018-09-12
 ### Fixed
 - Sequelize Repository now correctly reports missing model setup
