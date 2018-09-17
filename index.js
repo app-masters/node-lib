@@ -30,5 +30,6 @@ module.exports = {
     repository: require('./dist/sequelize/repository'),
     instance: require('./dist/sequelize/instance'),
     sequelizeInstance: require('./dist/sequelize/sequelizeInstance'),
-    messageRepository: require('./dist/sequelize/message/messageRepository')
+    messageRepository: require('./dist/sequelize/message/messageRepository'),
+    messageSchema: require('./dist/sequelize/message/messageSchema')
 };
