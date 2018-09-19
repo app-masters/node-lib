@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.1.2] - 2018-09-19
+### Added
+- New Method at messageRepository
+
 ## [2.0.109/2.1.1] - 2018-09-17
 ### Fixed
 - Exporting message repository again
