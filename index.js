@@ -29,5 +29,6 @@ module.exports = {
     finaleRestful: require('./dist/sequelize/finaleRestful'),
     repository: require('./dist/sequelize/repository'),
     instance: require('./dist/sequelize/instance'),
-    sequelizeInstance: require('./dist/sequelize/sequelizeInstance')
+    sequelizeInstance: require('./dist/sequelize/sequelizeInstance'),
+    messageRepository: require('./dist/sequelize/message/messageRepository')
 };
