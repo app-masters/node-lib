@@ -1,13 +1,13 @@
 {
     "name": "@app-masters/node-lib",
-    "version": "2.1.5",
+    "version": "2.1.51",
     "description": "It's very useful, but just for us at App Masters. To you it must be a code mess and useless.",
     "main": "./index.js",
     "scripts": {
-        "test": "jest --forceExit  --runInBand",
-        "clean": "rm -rf dist/ && rm -rf ./node_modules",
-        "build": "npm run clean && npm i && babel lib/ -d dist/",
-        "prepublishOnly": "npm run build"
+        "build": "npm run clean && npm install && babel lib/ -d dist/",
+        "clean": "rm -rf dist/ && rm -rf node_modules",
+        "prepublishOnly": "npm run build",
+        "test": "jest"
     },
     "repository": {
         "type": "git",
@@ -20,6 +20,7 @@
     },
     "homepage": "https://github.com/app-masters/node-lib#readme",
     "dependencies": {
+        "@app-masters/mongoose-it": "^1.0.6",
         "aws-sdk": "2.203.0",
         "axios": "^0.18.0",
         "babel-jest": "^22.4.3",
@@ -59,7 +60,6 @@
         "string-template": "^1.0.0"
     },
     "devDependencies": {
-        "@app-masters/mongoose-it": "^1.0.6",
         "@babel/cli": "^7.1.2",
         "@babel/core": "^7.0.0",
         "@babel/plugin-proposal-class-properties": "^7.0.0",
