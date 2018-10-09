@@ -1,11 +1,11 @@
 {
     "name": "@app-masters/node-lib",
-    "version": "2.1.51",
+    "version": "2.1.52",
     "description": "It's very useful, but just for us at App Masters. To you it must be a code mess and useless.",
     "main": "./index.js",
     "scripts": {
         "build": "npm run clean && npm install && babel lib/ -d dist/",
-        "clean": "rm -rf dist/ && rm -rf node_modules",
+        "clean": "rm -rf dist/ && rm -rf node_modules/",
         "prepublishOnly": "npm run build",
         "test": "jest"
     },
