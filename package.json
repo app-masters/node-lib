@@ -1,8 +1,8 @@
 {
     "name": "@app-masters/node-lib",
-    "version": "2.1.52",
+    "version": "2.1.53",
     "description": "It's very useful, but just for us at App Masters. To you it must be a code mess and useless.",
-    "main": "./index.js",
+    "main": "./dist/index.js",
     "scripts": {
         "build": "npm run clean && npm install && babel lib/ -d dist/",
         "clean": "rm -rf dist/ && rm -rf node_modules/",
