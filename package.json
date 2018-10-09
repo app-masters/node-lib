@@ -1,12 +1,13 @@
 {
     "name": "@app-masters/node-lib",
-    "version": "2.1.4",
+    "version": "2.1.5",
     "description": "It's very useful, but just for us at App Masters. To you it must be a code mess and useless.",
     "main": "./index.js",
     "scripts": {
         "test": "jest --forceExit  --runInBand",
-        "build": "rm -rf dist/ && rm -rf ./node_modules && npm i && babel lib/ -d dist/",
-        "prepublish": "npm run build"
+        "clean": "rm -rf dist/ && rm -rf ./node_modules",
+        "build": "npm run clean && npm i && babel lib/ -d dist/",
+        "prepublishOnly": "npm run build"
     },
     "repository": {
         "type": "git",
