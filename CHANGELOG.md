@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.1.4] - 2018-09-19
+### Added
+- Prepublish change to reinstall dependencies properly before publish
+
 ## [2.1.3] - 2018-09-19
 ### Added
 - Changed script to prePublish and adapted to Babel 7
