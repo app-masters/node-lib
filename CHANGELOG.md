@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.1.2] - 2018-10-24
+### Changed
+- AMMailing.sendMail now accept empty text
+
 ## [2.1.5] - 2018-09-19
 ### Added
 - Babel fixes
