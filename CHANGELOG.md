@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [2.1.61] - 2018-10-24
 ### Changed
+- `messageKey` fixed
+
+## [2.1.61] - 2018-10-24
+### Changed
 - AMMailing now has default 1000 `intervalBetweenMessages` value
 
 ## [2.1.60] - 2018-10-24
