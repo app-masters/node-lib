@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.1.63] - 2018-11-22
+### Fixes
+- Accept secondary database (hotfix)
+
 ## [2.1.61] - 2018-10-24
 ### Changed
 - `messageKey` fixed
