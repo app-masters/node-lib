@@ -48,6 +48,8 @@ const testPackage = {
     'minWebVersion': '0.0.0',
     'minAdminVersion': '0.0.1',
     'minMobileVersion': '0.0.1',
+    'minAndroidVersion': '0.0.1',
+    'minIosVersion': '0.0.1',
     'description': 'nodelib api-test',
     'main': 'index.js',
     'engines': {
