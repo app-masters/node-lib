@@ -6232,10 +6232,10 @@ nodemailer-html-to-text@3.0.0:
   dependencies:
     html-to-text "^4.0.0"
 
-nodemailer@4.3.1:
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-4.3.1.tgz#40e162f54193ba2fecca200d544e8f6c1106d694"
-  integrity sha512-ngyDzou/Rbppn9WUOpWNoe25mRrW5wMwRokWanBNLt+3YaxOLmUtrc0ZtHMOgHGFPAYNgKA9H70ELlV3qSHL7Q==
+nodemailer@6.4.16:
+  version "6.4.16"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.4.16.tgz#5cb6391b1d79ab7eff32d6f9f48366b5a7117293"
+  integrity sha512-68K0LgZ6hmZ7PVmwL78gzNdjpj5viqBdFqKrTtr9bZbJYj6BRj5W6WGkxXrEnUl3Co3CBXi3CZBUlpV/foGnOQ==
 
 nopt@^4.0.1, nopt@^4.0.3:
   version "4.0.3"
