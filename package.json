@@ -21,7 +21,7 @@
   "homepage": "https://github.com/app-masters/node-lib#readme",
   "dependencies": {
     "@app-masters/mongoose-it": "^1.0.6",
-    "aws-sdk": "2.203.0",
+    "aws-sdk": "2.814.0",
     "axios": "^0.18.0",
     "babel-jest": "^22.4.3",
     "bcrypt-nodejs": "0.0.3",
